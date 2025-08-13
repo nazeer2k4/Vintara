@@ -17,7 +17,8 @@ app.use(cors({
         if ([
             'https://vintara-psi.vercel.app',
             'https://vintara2.vercel.app',
-            'https://vintara-mk3s72yv5-nazeer-anwars-projects.vercel.app'
+            'https://vintara-mk3s72yv5-nazeer-anwars-projects.vercel.app',
+            'https://vintara.onrender.com'
         ].includes(origin)) {
             return callback(null, true);
         }
@@ -42,6 +43,7 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
 
