@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enquiry Form</title>
+    <link rel="stylesheet" href="enquiry0.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="main-heading">Enquiry Page</div>
+    <div class="form-outer">
+        <form id="contactForm" enctype="multipart/form-data" class="form-container">
+            <div class="form-row">
+                <div class="form-group gender-group">
+                    <label for="gender">Gender<span class="required">*</span></label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Gender</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group name-group">
+                    <label for="name">Name<span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group single">
+                    <label for="designation">Designation</label>
+                    <input type="text" id="designation" name="designation" placeholder="Designation">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group single">
+                    <label for="companyName">Company Name<span class="required">*</span></label>
+                    <input type="text" id="companyName" name="companyName" required placeholder="Company name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group phone-group">
+                    <label for="phone">Phone Number<span class="required">*</span></label>
+                    <div class="phone-input-wrapper">
+                        <select id="countryCode" name="countryCode" required>
+                            <option value="+91" selected>+91</option>
+                            <option value="+1">+1</option>
+                            <option value="+44">+44</option>
+                            <option value="+61">+61</option>
+                            <option value="+971">+971</option>
+                        </select>
+                        <input type="text" id="phone" name="phone" required placeholder="081234 56789" maxlength="15">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country<span class="required">*</span></label>
+                    <select id="country" name="country" required>
+                        <option value="">Country</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="Australia">Australia</option>
+                        <option value="UAE">UAE</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group single">
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="productCode">Product Code</label>
+                    <input type="text" id="productCode" name="productCode" placeholder="Product code">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" placeholder="Quantity">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="picture">Upload Picture</label>
+                    <input type="file" id="picture" name="picture" accept="image/*" placeholder="Image upload">
+                </div>
+                <div class="form-group">
+                    <label for="purpose">Purpose</label>
+                    <select id="purpose" name="purpose">
+                        <option value="">Purpose</option>
+                        <option value="Enquiry">Enquiry</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Order">Order</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group single">
+                    <label for="dfeedback">Enquiry/Feedback</label>
+                    <textarea id="dfeedback" name="dfeedback" rows="4" placeholder="Type your enquiry or feedback"></textarea>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+            <div id="responseMsg"></div>
+        </form>
+    </div>
+    <script src="enquiry0.js"></script>
+</body>
+</html>

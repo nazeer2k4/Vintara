@@ -1,0 +1,205 @@
+<style>
+  /* General footer styling */
+  footer {
+    background-image: url("/images/END BACKGROUND.jpg");
+    color: #eee;
+    padding: 40px 20px 20px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-column {
+    flex: 1 1 250px;
+    margin: 30px;
+    min-width: 200px;
+  }
+
+  .footer-column h2 {
+    font-family: "League Spartan", sans-serif;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    color: #dfdfdf;
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+    font-family: "Public Sans", sans-serif;
+  }
+
+  .footer-column a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+
+  .products-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .products-grid ul {
+    flex: 1 1 150px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 20px;
+    color: #0c4833;
+    transition: background-color 0.3s;
+  }
+
+  .social-icons a:hover {
+    background-color: #689f38;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+  }
+  @media (max-width: 440px) {
+    .products-grid ul {
+      flex: 1 1 45%; /* Force two columns */
+    }
+
+    .footer-column ul li a {
+      font-size: 12px; /* Smaller font for better fit */
+    }
+
+    .footer-column ul li {
+      margin-bottom: 6px; /* Slightly tighter spacing */
+    }
+  }
+  @media (max-width: 600px) {
+    .footer-column ul li a {
+      font-size: 13px;
+    }
+  }
+  @media (max-width: 440px) {
+    .footer-column ul li a {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 440px) {
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+      gap: 10px 20px;
+    }
+
+    .products-grid ul {
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .products-grid ul li a {
+      font-size: 12px; /* Keep small text as requested */
+    }
+
+    .footer-column ul li {
+      margin-bottom: 6px;
+    }
+  }
+
+  @media (min-width: 441px) and (max-width: 768px) {
+    .products-grid {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  }
+</style>
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h2>VINTARA INTERNATIONAL</h2>
+      <p><strong>Phone No:</strong> +91 93049 30058</p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:info@vintarainternational.com"
+          >info@vintarainternational.com</a
+        >
+      </p>
+      <p><strong>Address:</strong>Cossipore, Kolkata, West Bengal - 700002</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h2>Products</h2>
+      <div class="products-grid">
+        <ul>
+          <li><a href="/products-subcategory/brandpromotion.html">Brand Promotion Bags</a></li>
+          <li><a href="/products-subcategory/corporateitems.html">Corporate Items</a></li>
+          <li><a href="/products-subcategory/shoppingbags.html">Jute Shopping Bags</a></li>
+          <li><a href="/products-subcategory/gifthamperbasket.html">Gift HAMPER Bags</a></li>
+          <li><a href="/products-subcategory/jutepouches.html">Jute Pouches</a></li>
+          <li><a href="/products-subcategory/toiletrybags.html">Toiletry Bags</a></li>
+          <li><a href="/products-subcategory/growbags.html">Jute Grow Bags</a></li>
+          <li><a href="/products-subcategory/festivalandeventbags.html">Festival & Event Bags</a></li>
+        </ul>
+        <ul>
+          <li><a href="/products-subcategory/fashionablebags.html">Fashionable Bags</a></li>
+          <li><a href="/products-subcategory/bottlebags.html">Bottle Bags</a></li>
+          <li><a href="/products-subcategory/jarbags.html">Jute Jar Bags</a></li>
+          <li><a href="/products-subcategory/lunchbags.html">Jute Lunch Bags</a></li>
+          <li><a href="/products-subcategory/storagebasket.html">Storage Basket</a></li>
+          <li><a href="/products-subcategory/wallhangingbags.html">Wall Hanging Bags</a></li>
+          <li><a href="/products-subcategory/laundrybags.html">Laundry Bags</a></li>
+          <li><a href="/products-subcategory/yogamatbags.html">Yoga Mat Bags</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h2>Important Links</h2>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    Copyright © 2025 Vintara International. All Rights Reserved.
+  </div>
+</footer>

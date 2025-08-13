@@ -1,0 +1,226 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    background: #f8f7f3;
+}
+
+.bg-gradient {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: linear-gradient(135deg, #f8f7f3 0%, #e8f5e9 40%, #c8e6c9 100%);
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #3a5d2c;
+    margin-top: 32px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    z-index: 2;
+    position: relative;
+}
+
+.form-outer {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+
+.form-container {
+    background: #fff;
+    border-radius: 0.7em;
+    box-shadow: 0 4px 32px rgba(76,175,80,0.10), 0 1.5px 8px rgba(76,175,80,0.08);
+    padding: 38px 38px 28px 38px;
+    max-width: 540px;
+    width: 100%;
+    border: 2px solid #7ba92c;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #3a5d2c;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 18px;
+}
+
+.form-group.single {
+    flex: 1 1 100%;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #2d3e50;
+    font-size: 1.06em;
+}
+
+.required {
+    color: #d32f2f;
+    margin-left: 2px;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.gender-group select {
+    width: 100%;
+    max-width: 110px;
+    padding: 10px 12px;
+    font-size: 1em;
+    border-radius: 0.4em;
+    border: 1.5px solid #7ba92c;
+    background: #f6f9f4;
+    color: #388e3c;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.name-group input {
+    width:400px;
+    font-size: 1.15em;
+    padding: 14px 16px;
+    border-radius: 0.4em;
+    border: 1.5px solid #7ba92c;
+    background: #f6f9f4;
+    color: #2d3e50;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 13px 14px;
+    border: 1.5px solid #7ba92c;
+    border-radius: 0.4em;
+    font-size: 1em;
+    background: #f6f9f4;
+    transition: border 0.2s;
+    color: #2d3e50;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border: 2px solid #388e3c;
+    outline: none;
+    background: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+    font-size: 1.05em;
+}
+
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: #f6f9f4;
+    border: 1.5px solid #7ba92c;
+    border-radius: 0.4em;
+    overflow: hidden;
+}
+
+.phone-input-wrapper select {
+    width: 70px;
+    padding: 13px 8px;
+    border: none;
+    background: #f6f9f4;
+    font-size: 1em;
+    color: #388e3c;
+    font-weight: 500;
+    border-radius: 0.4em 0 0 0.4em;
+    outline: none;
+    appearance: none;
+    box-sizing: border-box;
+}
+
+.phone-input-wrapper input[type="text"] {
+    flex: 1;
+    border: none;
+    padding-left: 12px;
+    font-size: 1em;
+    background: #f6f9f4;
+    border-radius: 0 0.4em 0.4em 0;
+    outline: none;
+    color: #2d3e50;
+}
+
+input[type="file"] {
+    padding: 7px 0;
+    background: #f6f9f4;
+    border: none;
+    font-size: 1em;
+    color: #2d3e50;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #7ba92c 60%, #4caf50 100%);
+    color: #fff;
+    border: none;
+    border-radius: 0.4em;
+    font-size: 1.18em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 18px;
+    transition: background 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(76,175,80,0.08);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #4caf50 60%, #7ba92c 100%);
+    box-shadow: 0 4px 16px rgba(76,175,80,0.13);
+}
+
+#responseMsg {
+    margin-top: 18px;
+    text-align: center;
+    color: #388e3c;
+    font-weight: 500;
+    font-size: 1.08em;
+}
+
+@media (max-width: 700px) {
+    .form-container {
+        padding: 18px 6vw 18px 6vw;
+        max-width: 98vw;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .main-heading {
+        font-size: 1.4em;
+        margin-top: 18px;
+    }
+}

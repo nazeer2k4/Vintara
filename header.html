@@ -1,0 +1,514 @@
+<head>
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+</head>
+<!-- Sticky Premium Navbar -->
+    <nav class="v-sticky-navbar v-sticky-navbar-transparent" id="StickyNavbar">
+      <div class="v-navbar-inner">
+        <div class="v-navbar-left">
+          <!-- Two logos, toggle visibility with CSS -->
+          <img
+            src="images/vintaraLogoWhite.svg"
+            alt="Vintara Logo White"
+            class="v-navbar-logo logo-white"
+          />
+          <img
+            src="images/vintaraLogoGreen.svg"
+            alt="Vintara Logo Green"
+            class="v-navbar-logo logo-green"
+          />
+
+          <ul class="v-navbar-menu" id="navbarLinks">
+            <li><a href="/index.html" class="v-navbar-link">Home</a></li>
+            <li>
+              <a href="/products-main.html" class="v-navbar-link">Products</a>
+            </li>
+            <li><a href="/about.html" class="v-navbar-link">About Us</a></li>
+            <li><a href="/blog.html" class="v-navbar-link">Blog</a></li>
+          </ul>
+        </div>
+        <div class="v-navbar-right">
+          <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
+          <button
+            class="v-navbar-hamburger"
+            id="vNavbarHamburger"
+            aria-label="Open menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
+  <div class="v-mobile-logo-container">
+    <img
+      src="images/vintaraNavbarLogo.svg"
+      alt="Vintara Logo"
+      class="v-mobile-logo"
+    />
+  </div>
+  <ul>
+    <li><a href="/index.html" class="v-navbar-link">Home</a></li>
+    <li><a href="/products-main.html" class="v-navbar-link">Products</a></li>
+    <li><a href="/about.html" class="v-navbar-link">About Us</a></li>
+    <li><a href="/blog.html" class="v-navbar-link">Blog</a></li>
+    <li>
+      <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
+    </li>
+  </ul>
+</div>
+
+    </nav>
+<style>
+  html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+body {
+  font-family: var(--font-main);
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+  transition: var(--transition);
+  overflow-x: hidden;
+}
+
+header,
+section,
+footer {
+  width: 100%;
+}
+  :root {
+  --primary: #0c4833; /* Dark Green */
+  --secondary: #f6ffec; /* Pista */
+  --accent: #0c4833; /* Use dark green as accent for consistency */
+  --background: #f6ffec; /* Pista */
+  --text: #0c4833; /* Dark Green for text */
+  --cta: #0c4833; /* Dark Green for call to action */
+  --cta-gradient: linear-gradient(90deg, #0c4833 0%, #f6ffec 100%);
+  --shadow: 0 4px 24px rgba(12, 72, 51, 0.08);
+  --shadow-hover: 0 8px 32px rgba(12, 72, 51, 0.16);
+  --radius: 18px;
+  --font-title: "League Spartan", "Playfair Display", Arial, sans-serif;
+  --font-main: "Public Sans", "Inter", "DM Sans", Arial, sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --section-padding: 5.5rem 0 4.5rem 0;
+  --container-max: 1200px;
+}
+/* === NAVBAR === */
+.v-sticky-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(18px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(12, 72, 51, 0.13);
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.v-navbar-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 100%;
+}
+
+.v-navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.v-navbar-logo {
+  height: 200px;
+  margin: 0;
+  padding: 8px;
+  margin-right: 2rem;
+  transition: 0.3s ease;
+}
+
+/* Logo visibility on scroll */
+.v-sticky-navbar-scrolled .logo-white {
+  display: none;
+}
+.v-sticky-navbar-scrolled .logo-green {
+  display: block;
+}
+
+/* For index page: always show green logo */
+body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-green {
+  display: block;
+}
+body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
+  display: none;
+}
+
+.v-navbar-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.v-navbar-link {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #0c4833; /* Deep green */
+  transition: color 0.3s ease;
+  position: relative;
+}
+.v-navbar-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #0c4833; /* Deep green */
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+.v-navbar-link:hover::after {
+  width: 100%;
+}
+
+/* ENQUIRE button */
+.v-btn.v-navbar-enquire {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none; /* ✅ Fix underline */
+}
+.v-btn.v-navbar-enquire:hover {
+  background: white;
+  color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+  .v-navbar-right .v-btn.v-navbar-enquire {
+    display: none !important;
+  }
+}
+
+/* === HAMBURGER MENU === */
+.v-navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none; /* This removes the border */
+  cursor: pointer;
+  z-index: 1200;
+  transition: all 0.3s ease;
+}
+.v-navbar-hamburger span {
+  height: 3px;
+  width: 24px;
+  background: var(--primary);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+.v-navbar-hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.v-navbar-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.v-navbar-hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Hide hamburger on desktop, show on mobile/tablet */
+@media (max-width: 1024px) {
+  .v-navbar-menu {
+    display: none !important;
+  }
+  .v-navbar-hamburger {
+    display: flex !important;
+  }
+  .v-navbar-right .v-btn.v-navbar-enquire {
+    display: none !important;
+  }
+}
+
+/* Ensure hamburger is hidden on larger screens */
+@media (min-width: 1025px) {
+  .v-navbar-hamburger {
+    display: none !important;
+  }
+  .v-navbar-menu {
+    display: flex !important;
+  }
+  .v-navbar-right .v-btn.v-navbar-enquire {
+    display: inline-block !important;
+  }
+}
+
+/* === MOBILE MENU === */
+.v-mobile-logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 2.5rem; */
+}
+
+.v-mobile-logo {
+  max-width: 240px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.v-mobile-logo:hover {
+  transform: scale(1.05);
+}
+
+.v-navbar-mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 30vw;
+  max-width: 280px;
+  background: white;
+  /* background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(18px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(12, 72, 51, 0.13); */
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1100;
+}
+
+.v-navbar-mobile-menu.active {
+  transform: translateX(0%);
+  opacity: 1;
+  pointer-events: auto;
+}
+.v-navbar-mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.v-navbar-mobile-menu .v-navbar-link {
+  font-size: 1.2rem;
+  font-family: var(--font-title);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.v-navbar-mobile-menu .v-navbar-link:hover {
+  color: #176b4c;
+}
+
+.v-navbar-mobile-menu .v-btn.v-navbar-enquire {
+  margin-top: 1rem;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none; /* ✅ Fix underline */
+}
+.v-navbar-mobile-menu ul li {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.v-navbar-mobile-menu.active ul li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive width on small screens */
+@media (max-width: 480px) {
+  .v-navbar-mobile-menu {
+    width: 100vw; /* Full width on very small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .v-navbar-mobile-menu {
+    width: 100%;
+    padding: 4rem 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .v-navbar-inner {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content h1 {
+    font-size: 2.4rem;
+  }
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .v-navbar-mobile-menu {
+    width: 100%;
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .v-navbar-mobile-menu {
+    padding: 4rem 1rem;
+  }
+
+  .v-navbar-mobile-menu .v-navbar-link {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  .v-sticky-navbar {
+    height: 90px; /* Reduce from 100px to 70px (or any size you prefer) */
+  }
+
+  .v-navbar-logo {
+    height: 180px; /* Also scale logo to match smaller navbar */
+  }
+}
+
+.v-navbar-hamburger,
+.v-navbar-hamburger * {
+  border: none !important;
+  box-shadow: none !important;
+}
+/* ENQUIRE button */
+.v-btn.v-navbar-enquire {
+  border: 2px solid white;
+  color: #0c4833;
+  background: transparent;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none; /* ✅ Fix underline */
+}
+.v-btn.v-navbar-enquire:hover {
+  background: white;
+  color: var(--primary);
+}
+.v-sticky-navbar-scrolled .v-btn.v-navbar-enquire {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: white;
+}
+
+@media (max-width: 1024px) {
+  .v-navbar-right .v-btn.v-navbar-enquire {
+    display: none !important;
+  }
+}
+.v-navbar-mobile-menu .v-btn.v-navbar-enquire {
+  margin-top: 1rem;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none; /* ✅ Fix underline */
+}
+</style>
+<script>
+// Mobile menu toggle functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("vNavbarHamburger");
+  const mobileMenu = document.getElementById("vNavbarMobileMenu");
+  const body = document.body;
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener("click", function () {
+      const isActive = hamburger.classList.contains("active");
+
+      if (isActive) {
+        // Close menu
+        hamburger.classList.remove("active");
+        mobileMenu.classList.remove("active");
+        body.style.overflow = "";
+      } else {
+        // Open menu
+        hamburger.classList.add("active");
+        mobileMenu.classList.add("active");
+        body.style.overflow = "hidden"; // Prevent background scrolling
+      }
+    });
+
+    // Close menu when clicking on mobile menu links
+    const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        hamburger.classList.remove("active");
+        mobileMenu.classList.remove("active");
+        body.style.overflow = "";
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+      if (
+        !hamburger.contains(event.target) &&
+        !mobileMenu.contains(event.target)
+      ) {
+        hamburger.classList.remove("active");
+        mobileMenu.classList.remove("active");
+        body.style.overflow = "";
+      }
+    });
+
+    // Close menu on window resize if screen becomes larger
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 1024) {
+        hamburger.classList.remove("active");
+        mobileMenu.classList.remove("active");
+        body.style.overflow = "";
+      }
+    });
+  }
+});
+</script>

@@ -1,0 +1,1003 @@
+/* ROOT VARIABLES */
+:root {
+  --primary: #0c4833;
+  --secondary: #f6ffec;
+  --accent: #0c4833;
+  --background: #f6ffec;
+  --text: #0c4833;
+  --font-title: "League Spartan", "Playfair Display", Arial, sans-serif;
+  --font-main: "Public Sans", "Inter", sans-serif;
+}
+
+/* GLOBAL RESET */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* === NAVBAR === */
+.v-sticky-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.v-sticky-navbar-transparent {
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.v-sticky-navbar-scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(12, 72, 51, 0.1);
+}
+
+.v-navbar-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 100%;
+}
+
+.v-navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.v-navbar-logo {
+  height: 256px;
+  margin: 32px 32px 0 0;
+  padding: 32px;
+  margin-right: 2rem;
+  transition: 0.3s ease;
+}
+.logo-green {
+  display: none;
+}
+.logo-white {
+  display: block;
+}
+
+/* Logo visibility on scroll */
+.v-sticky-navbar-scrolled .logo-white {
+  display: none;
+}
+.v-sticky-navbar-scrolled .logo-green {
+  display: block;
+}
+
+.v-navbar-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.v-navbar-link {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.v-navbar-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+.v-navbar-link:hover::after {
+  width: 100%;
+}
+
+.v-sticky-navbar-scrolled .v-navbar-link {
+  color: var(--primary);
+}
+.v-sticky-navbar-scrolled .v-navbar-link::after {
+  background: var(--primary);
+}
+
+/* ENQUIRE button */
+.v-btn.v-navbar-enquire {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none; /* ✅ Fix underline */
+}
+.v-btn.v-navbar-enquire:hover {
+  background: white;
+  color: var(--primary);
+}
+.v-sticky-navbar-scrolled .v-btn.v-navbar-enquire {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: white;
+}
+
+@media (max-width: 1024px) {
+  .v-navbar-right .v-btn.v-navbar-enquire {
+    display: none !important;
+  }
+}
+
+/* === ABOUT HERO SECTION === */
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(12, 72, 51, 0.6); /* dark green overlay */
+/* z-index: 1;
+  } */
+
+.about-hero {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  background-image: url("images/ABOUT 1 BACKGROUND NEW.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 6rem 2rem 4rem 2rem;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+  z-index: 100;
+}
+
+.about-content h1 {
+  font-family: var(--font-title);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.about-content p {
+  font-family: var(--font-main);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* === HAMBURGER MENU === */
+.v-navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1200;
+}
+.v-navbar-hamburger span {
+  height: 3px;
+  width: 24px;
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+@media (max-width: 1024px) {
+  .v-navbar-menu {
+    display: none !important;
+  }
+  .v-navbar-hamburger {
+    display: flex !important;
+  }
+  .v-navbar-right .v-btn.v-navbar-enquire {
+    display: none !important;
+  }
+}
+
+/* === MOBILE MENU === */
+.v-navbar-mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background: var(--secondary);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 5rem 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1100;
+}
+.v-navbar-mobile-menu.active {
+  transform: translateX(0%);
+  display: flex;
+}
+
+.v-navbar-mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.v-navbar-mobile-menu .v-navbar-link {
+  font-size: 1.2rem;
+  font-family: var(--font-title);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.v-navbar-mobile-menu .v-navbar-link:hover {
+  color: #176b4c;
+}
+
+.v-navbar-mobile-menu .v-btn.v-navbar-enquire {
+  margin-top: 1rem;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none; /* ✅ Fix underline */
+}
+
+/* Responsive width on small screens */
+@media (max-width: 480px) {
+  .v-navbar-mobile-menu {
+    width: 100%;
+    padding: 4rem 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .v-navbar-inner {
+    padding: 0 1rem;
+  }
+
+  .about-content {
+    padding: 2rem 1rem;
+  }
+
+  .about-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content h1 {
+    font-size: 2.4rem;
+  }
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .v-navbar-mobile-menu {
+    width: 100%;
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content h1 {
+    font-size: 2rem;
+  }
+  .about-content p {
+    font-size: 0.95rem;
+  }
+
+  .v-navbar-mobile-menu {
+    padding: 4rem 1rem;
+  }
+
+  .v-navbar-mobile-menu .v-navbar-link {
+    font-size: 1.1rem;
+  }
+}
+
+/* === BLOG PAGE STYLES === */
+.blog-hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  background-image: url("images/BLOG MAIN.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.blog-hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  width: 100%;
+}
+
+.blog-hero-overlay h1 {
+  font-family: "Kanit", sans-serif;
+  font-size: 4.5rem;
+  color: #fff;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.blog-intro {
+  background-color: var(--background);
+  padding: 4rem 2rem;
+  font-family: var(--font-main);
+  text-align: center;
+  color: var(--text);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.blog-intro h2 {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.blog-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .blog-hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+  .blog-intro h2 {
+    font-size: 1.3rem;
+  }
+  .blog-intro p {
+    font-size: 1rem;
+  }
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background);
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 1.5rem;
+  font-family: var(--font-main);
+  color: var(--text);
+}
+
+.blog-card-content h3 {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+.blog-card-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .blog-hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+  .blog-intro h2 {
+    font-size: 1.3rem;
+  }
+  .blog-intro p {
+    font-size: 1rem;
+  }
+  .blog-card img {
+    height: 180px;
+  }
+}
+
+.blog-footer {
+  background-color: var(--background);
+  text-align: center;
+  padding: 4rem 2rem 6rem;
+}
+
+.author-profile {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-profile img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.author-profile p {
+  font-family: var(--font-main);
+  font-size: 1rem;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+/* =================================Footer Section======================================= */
+/* Footer Styling */
+.site-footer {
+  background: url("images/END BACKGROUND.jpg") center center / cover no-repeat;
+  padding: 4rem 2rem;
+  color: #f6ffec;
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2.5rem;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f6ffec;
+  margin-bottom: 0.6rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.footer-column p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #f6ffec;
+}
+
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.footer-socials a {
+  color: #f6ffec;
+  font-size: 1.1rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
+/* Bottom line */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #f6ffec;
+  font-style: italic;
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+}
+
+/* === RESPONSIVE FIXES FOR ALL SECTIONS === */
+
+/* 1. Remove x-axis scroll on small screens */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* 2. Add bottom margin to each section to prevent overlap */
+section {
+  margin-bottom: 2rem;
+}
+
+/* 3. Replace custom cursor on touch devices */
+@media (hover: none), (pointer: coarse) {
+  .circle {
+    display: none !important;
+  }
+
+  body:active::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    background: rgba(12, 72, 51, 0.3);
+    border-radius: 50%;
+    animation: tap-circle 0.5s ease-out forwards;
+    pointer-events: none;
+  }
+
+  @keyframes tap-circle {
+    from {
+      transform: scale(0.2);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+}
+
+/* === Responsive: About Section === */
+@media (max-width: 768px) {
+  .jute-section-with-bg {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  .jute-frame-wrapper,
+  .about-text-col {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+  }
+  .about-title {
+    font-size: 1.6rem;
+  }
+  .about-desc {
+    font-size: 1rem;
+  }
+}
+
+/* === Responsive: Why Us Section (Already partially done) === */
+@media (max-width: 768px) {
+  .v-choose-exact {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  .v-choose-heading {
+    font-size: 1.8rem;
+  }
+  .v-choose-subtext {
+    font-size: 0.95rem;
+  }
+  .v-feature {
+    width: 160px;
+  }
+  .v-feature img {
+    width: 60px;
+  }
+  .v-feature h4 {
+    font-size: 1rem;
+  }
+  .v-feature p {
+    font-size: 0.85rem;
+  }
+}
+
+/* === Responsive: Products === */
+@media (max-width: 768px) {
+  .product-card {
+    padding: 1rem;
+  }
+  .products-title {
+    font-size: 1.8rem;
+  }
+  .product-card h3 {
+    font-size: 0.9rem;
+  }
+  .product-categories {
+    gap: 1rem;
+  }
+}
+
+/* === Responsive: Fabric Section === */
+@media (max-width: 768px) {
+  .fabric-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .fabric-item img {
+    width: 180px;
+    height: 180px;
+  }
+  .fabric-item p {
+    font-size: 1.1rem;
+  }
+}
+
+/* === Responsive: Stats Section === */
+@media (max-width: 768px) {
+  .vintara-stats-title {
+    font-size: 1.6rem;
+  }
+  .vintara-stats-description {
+    font-size: 1rem;
+  }
+}
+
+/* === Responsive: FAQ === */
+@media (max-width: 768px) {
+  .v-faq-header h2 {
+    font-size: 1.8rem;
+  }
+  .v-faq-question {
+    font-size: 1rem;
+  }
+}
+
+/* === Responsive: Contact === */
+@media (max-width: 768px) {
+  .contact-form-col,
+  .contact-info-col {
+    width: 100%;
+  }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* === Responsive: Footer === */
+@media (max-width: 768px) {
+  .footer-column {
+    text-align: center;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* === Layout Improvements for Small Screens === */
+
+/* 1. Fabric section - horizontal scroll for mobile */
+@media (max-width: 768px) {
+  .fabric-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+  }
+  .fabric-item {
+    min-width: 200px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  .fabric-item img {
+    width: 160px;
+    height: 160px;
+  }
+  .fabric-item p {
+    font-size: 1rem;
+  }
+}
+
+/* 2. Vintara Stats Section - better compact layout */
+@media (max-width: 768px) {
+  .vintara-stats-section {
+    padding: 4rem 1rem;
+  }
+  .vintara-stats-overlay {
+    padding: 2rem 1.2rem;
+  }
+  .vintara-stats-title {
+    font-size: 1.5rem;
+  }
+  .vintara-stats-description {
+    font-size: 0.95rem;
+  }
+  .vintara-stat-number {
+    font-size: 1.5rem;
+  }
+  .vintara-stat-label {
+    font-size: 0.85rem;
+  }
+}
+
+/* 3. FAQ section - padding and scale fix */
+@media (max-width: 768px) {
+  .v-faq-container {
+    padding: 0 1rem;
+  }
+  .v-faq-header h2 {
+    font-size: 1.6rem;
+  }
+  .v-faq-header p {
+    font-size: 0.95rem;
+  }
+  .v-faq-item {
+    margin: 1rem 0;
+  }
+  .v-faq-question {
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+  }
+  .v-faq-answer-content {
+    padding: 0 1.2rem 1.2rem;
+  }
+  .v-faq-section {
+    padding: 3.5rem 0.5rem;
+  }
+}
+
+.site-footer {
+  background: url("./images/END BACKGROUND.jpg") center center / cover no-repeat;
+  padding: 3rem 1.5rem;
+  color: #f6ffec;
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.3rem;
+  max-width: 1200px;
+  margin: 0 auto 1.5rem;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f6ffec;
+  margin-bottom: 0.6rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.footer-column p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f6ffec;
+}
+
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.footer-socials a {
+  color: #f6ffec;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
+/* Bottom line */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  font-size: 1rem;
+  color: #f6ffec;
+  font-family: "Public Sans";
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .premium-hero,
+  .products-section,
+  .fabric-section,
+  .vintara-stats-section,
+  .v-faq-section,
+  .contact-us,
+  .site-footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box;
+  }
+  .footer-content {
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .premium-hero,
+  .products-section,
+  .fabric-section,
+  .vintara-stats-section,
+  .v-faq-section,
+  .contact-us,
+  .site-footer {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .footer-content {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+}
+
+/* === FOOTER === */
+.v-footer {
+  background-image: url("images/footerBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #f6ffec;
+  font-family: "Public Sans", sans-serif;
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.v-footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+}
+
+.v-footer-column {
+  flex: 1 1 300px;
+  color: #f6ffec;
+}
+
+.v-footer-column h4 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.v-footer-column p,
+.v-footer-column a {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f6ffec;
+  text-decoration: none;
+}
+
+.v-footer-column a:hover {
+  text-decoration: underline;
+}
+
+.v-footer-logo img {
+  max-height: 200px;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.v-footer-logo img:hover {
+  transform: scale(1.05);
+}
+
+.v-footer-social {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.v-footer-social a {
+  color: #f6ffec;
+  margin: 0 12px;
+  font-size: 1.3rem;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.v-footer-social a:hover {
+  transform: translateY(-3px) scale(1.1);
+  color: #e4f3db;
+}
+
+.v-footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Playfair Display", cursive;
+  font-size: 1.05rem;
+  color: #f6ffec;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .v-footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .v-footer-column {
+    flex: 1 1 100%;
+  }
+
+  .v-footer-logo img {
+    max-height: 90px;
+  }
+}

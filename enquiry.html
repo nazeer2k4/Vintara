@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+          href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Public+Sans&display=swap"
+          rel="stylesheet"
+        />
+    <title>Enquiry - Vintara International</title>
+    <style>
+      :root {
+        --pista: #f6ffec;
+        --dark-green: #0c4833;
+        --white: #fff;
+        --font-heading: "League Spartan", sans-serif;
+        --font-text: "Public Sans", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-text);
+        background: var(--pista);
+        color: var(--dark-green);
+        padding: 2rem;
+      }
+
+      .form-section {
+        max-width: 700px;
+        margin: auto;
+        background: var(--white);
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        font-family: var(--font-heading);
+        text-align: center;
+        color: var(--dark-green);
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.2rem;
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-family: var(--font-text);
+      }
+
+      .flex-group {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .flex-group select,
+      .flex-group input {
+        flex: 1;
+      }
+
+      button {
+        width: 100%;
+        background-color: var(--dark-green);
+        color: var(--white);
+        border: none;
+        padding: 0.8rem;
+        font-size: 1.1rem;
+        border-radius: 6px;
+        font-family: var(--font-heading);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #093a29;
+      }
+
+      @media (max-width: 600px) {
+        .flex-group {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+        
+        <section class="form-section">
+          <form
+            id="enquiryForm"
+            action="https://formspree.io/f/xyyqjgwk"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <h2>Enquiry Form</h2>
+
+            <div class="form-group">
+              <label>Gender + Name*</label>
+              <div class="flex-group">
+                <select name="gender" required>
+                  <option value="" disabled selected>Select</option>
+                  <option>Mr.</option>
+                  <option>Ms.</option>
+                  <option>Other</option>
+                </select>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Designation*</label>
+              <input type="text" name="designation" required />
+            </div>
+
+            <div class="form-group">
+              <label>Company Name*</label>
+              <input type="text" name="company" required />
+            </div>
+
+            <div class="form-group">
+              <label>Phone*</label>
+              <div class="flex-group">
+                <select name="countryCode" required>
+                  <option value="+91">🇮🇳 +91</option>
+                  <option value="+1">🇺🇸 +1</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <!-- Add more if needed -->
+                </select>
+                <input
+                  type="tel"
+                  name="phone"
+                  pattern="[0-9]{7,15}"
+                  placeholder="Phone Number"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Email*</label>
+              <input type="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label>Country*</label>
+              <select name="country" required>
+                <option value="" disabled selected>Select Country</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Product Code* (4 characters)</label>
+              <input type="text" name="productCode" maxlength="4" required />
+            </div>
+
+            <div class="form-group">
+              <label>Upload Picture (optional, PNG/JPG/JPEG, max 5MB)</label>
+              <input type="file" name="image" accept=".png, .jpg, .jpeg" />
+            </div>
+
+            <div class="form-group">
+              <label>Select Purpose*</label>
+              <select name="purpose" required>
+                <option value="" disabled selected>Select Purpose</option>
+                <option>Product Inquiry</option>
+                <option>Partnership</option>
+                <option>Support</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Other Enquiry / Feedback</label>
+              <textarea
+                name="feedback"
+                rows="4"
+                placeholder="Write here..."
+              ></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+
+        <script>
+          // Optional image size check
+          document
+            .getElementById("enquiryForm")
+            .addEventListener("submit", function (e) {
+              const fileInput = this.querySelector('input[type="file"]');
+              if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                if (file.size > 5 * 1024 * 1024) {
+                  // 5MB
+                  e.preventDefault();
+                  alert("File size must be under 5MB.");
+                }
+              }
+            });
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
