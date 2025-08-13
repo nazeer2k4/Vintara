@@ -3,7 +3,7 @@ async function fetchForms() {
     const tbody = document.getElementById('formsTableBody');
     tbody.innerHTML = '<tr><td colspan="14">Loading...</td></tr>';
     try {
-        const res = await fetch('http://localhost:5000/api/form');
+        const res = await fetch('https://vintara.onrender.com/api/form');
         if (res.ok) {
             const data = await res.json();
             if (!data.length) {
@@ -34,5 +34,6 @@ async function fetchForms() {
         tbody.innerHTML = '<tr><td colspan="14">Error connecting to server.</td></tr>';
     }
 }
+
 
 window.addEventListener('DOMContentLoaded', fetchForms);
