@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLAIN SHOPPING BAGS</title>
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Playfair+Display:ital@0;1&family=Public+Sans&display=swap"
+      rel="stylesheet"
+    />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>"
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <div id="header"></div>
+  <style>
+    /* ROOT VARIABLES */
+    :root {
+      --primary: #0c4833;
+      --secondary: #f6ffec;
+      --accent: #0c4833;
+      --background: #f6ffec;
+      --text: #0c4833;
+      --font-title: "League Spartan", "Playfair Display", Arial, sans-serif;
+      --font-main: "Public Sans", "Inter", sans-serif;
+    }
+
+    /* GLOBAL RESET */
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-main);
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* === NAVBAR === */
+    .v-sticky-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.4s ease, backdrop-filter 0.4s ease,
+        box-shadow 0.4s ease;
+    }
+
+    .v-sticky-navbar-transparent {
+      background: transparent;
+      backdrop-filter: none;
+      box-shadow: none;
+    }
+
+    .v-sticky-navbar-scrolled {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 5px 20px rgba(12, 72, 51, 0.1);
+    }
+
+    .v-navbar-inner {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 100%;
+    }
+
+    .v-navbar-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .v-navbar-logo {
+      height: 256px;
+      margin: 32px 32px 0 0;
+      padding: 32px;
+      margin-right: 2rem;
+      transition: 0.3s ease;
+    }
+    .logo-green {
+      display: none;
+    }
+    .logo-white {
+      display: block;
+    }
+
+    /* Logo visibility on scroll */
+    .v-sticky-navbar-scrolled .logo-white {
+      display: none;
+    }
+    .v-sticky-navbar-scrolled .logo-green {
+      display: block;
+    }
+
+    .v-navbar-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Navbar links always green, never white */
+    .v-navbar-link {
+      font-family: var(--font-title);
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #0c4833; /* Deep green */
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .v-navbar-link::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #0c4833; /* Deep green */
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
+    }
+    .v-navbar-link:hover::after {
+      width: 100%;
+    }
+    .v-sticky-navbar-scrolled .v-navbar-link {
+      color: #0c4833;
+    }
+    .v-sticky-navbar-scrolled .v-navbar-link::after {
+      background: #0c4833;
+    }
+
+    /* ENQUIRE button */
+    .v-btn.v-navbar-enquire {
+      border: 2px solid #0c4833; /* Always deep green */
+      color: #0c4833;
+      background: transparent;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      text-decoration: none; /* ✅ Fix underline */
+    }
+    .v-btn.v-navbar-enquire:hover {
+      background: #0c4833;
+      color: #fff;
+    }
+    .v-sticky-navbar-scrolled .v-btn.v-navbar-enquire {
+      border: 2px solid #0c4833;
+      color: #0c4833;
+      background: white;
+    }
+
+    @media (max-width: 1024px) {
+      .v-navbar-right .v-btn.v-navbar-enquire {
+        display: none !important;
+      }
+    }
+
+    /* === HAMBURGER MENU === */
+    .v-navbar-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1200;
+    }
+    .v-navbar-hamburger span {
+      height: 3px;
+      width: 24px;
+      background: var(--primary);
+      border-radius: 3px;
+    }
+
+    @media (max-width: 1024px) {
+      .v-navbar-menu {
+        display: none !important;
+      }
+      .v-navbar-hamburger {
+        display: flex !important;
+      }
+      .v-navbar-right .v-btn.v-navbar-enquire {
+        display: none !important;
+      }
+    }
+
+    /* === MOBILE MENU === */
+    .v-navbar-mobile-menu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100vh;
+      background: var(--secondary);
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      padding: 5rem 2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 1100;
+    }
+    .v-navbar-mobile-menu.active {
+      transform: translateX(0%);
+      display: flex;
+    }
+
+    .v-navbar-mobile-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .v-navbar-mobile-menu .v-navbar-link {
+      font-size: 1.2rem;
+      font-family: var(--font-title);
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .v-navbar-mobile-menu .v-navbar-link:hover {
+      color: #176b4c;
+    }
+
+    .v-navbar-mobile-menu .v-btn.v-navbar-enquire {
+      margin-top: 1rem;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+      padding: 0.6rem 1.2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 6px;
+      text-align: center;
+      text-decoration: none; /* ✅ Fix underline */
+    }
+
+    /* Responsive width on small screens */
+    @media (max-width: 480px) {
+      .v-navbar-mobile-menu {
+        width: 100%;
+        padding: 4rem 1.2rem;
+      }
+    }
+
+    /* Products grid */
+    :root {
+      --pista: #f6ffec;
+      --dark-green: #0c4833;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Public Sans", sans-serif;
+      background-color: var(--pista);
+      color: var(--dark-green);
+    }
+
+    .hero {
+      background: url("../images/OUR PRODUCTS/PLAIN\ SHOPPING\ BAGS\ HERO.png")
+        center/cover no-repeat;
+      height: 45vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: "League Spartan", sans-serif;
+      font-size: 5rem;
+      color: var(--dark-green);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      padding: 4rem;
+      background-color: var(--pista);
+    }
+
+    .product-card {
+      background-color: white;
+      border: 2px solid var(--dark-green);
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+
+    .product-card h2 {
+      font-family: "League Spartan", sans-serif;
+      font-size: 1.4rem;
+      padding: 1.2rem;
+      color: var(--dark-green);
+    }
+
+    .product-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.5rem;
+        padding: 0.5rem 1rem;
+      }
+      .product-card img {
+        height: 180px;
+      }
+    }
+    .v-sticky-navbar-transparent .v-navbar-link {
+      color: #0c4833 !important;
+    }
+    .v-sticky-navbar-transparent .v-navbar-link::after {
+      background: #0c4833 !important;
+    }
+    .product-page-layout {
+      display: flex;
+      align-items: flex-start;
+      margin: 0;
+    }
+
+    /* Hero height is 45vh */
+    .product-page-layout {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .product-sidebar {
+      width: 320px;
+      min-height: calc(100vh - 45vh); /* full height minus hero */
+      background-color: white;
+      color: var(--dark-green);
+      padding: 2rem 1.5rem;
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 1.05rem;
+      /* border-right: 2px solid var(--dark-green); */
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, visibility 0.3s ease;
+    }
+
+    .product-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    @media (max-width: 1024px) {
+      .product-sidebar {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .product-sidebar.active {
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
+
+    .product-sidebar li {
+      padding: 1rem 1.2rem;
+      border-left: 4px solid transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      color: var(--dark-green);
+      border-radius: 6px;
+    }
+
+    .product-sidebar li:hover {
+      background-color: var(--dark-green);
+      color: #fff;
+      border-left: 4px solid #fff;
+    }
+
+    .product-sidebar li.active {
+      background-color: var(--dark-green);
+      color: #fff;
+      border-left: 4px solid #fff;
+    }
+
+    /* Responsive adjustment */
+    @media (max-width: 1024px) {
+      .product-sidebar {
+        display: none;
+        position: fixed;
+        top: 100px; /* below navbar */
+        left: 0;
+        width: 80%;
+        max-width: 300px;
+        height: calc(100vh - 100px); /* adjust for navbar height */
+        background-color: var(--pista);
+        z-index: 1000;
+        overflow-y: auto;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+      }
+
+      .product-sidebar.active {
+        display: block;
+        transform: translateX(0%);
+      }
+      /* Mobile Sidebar (hidden by default) */
+      .product-sidebar {
+        width: 320px;
+        min-height: calc(100vh - 45vh);
+        background-color: var(--pista);
+        color: var(--dark-green);
+        padding: 2rem 1.5rem;
+        font-family: var(--font-title);
+        font-weight: 700;
+        font-size: 1.05rem;
+        border-right: 2px solid var(--dark-green);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, visibility 0.3s ease;
+      }
+
+      /* Always hide sidebar on mobile by default */
+      @media (max-width: 1024px) {
+        .product-sidebar {
+          display: none;
+          position: fixed;
+          top: 100px;
+          left: 0;
+          width: 80%;
+          max-width: 300px;
+          height: calc(100vh - 100px);
+          background-color: var(--pista);
+          z-index: 1000;
+          overflow-y: auto;
+          box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+          transform: translateX(-100%);
+        }
+
+        .product-sidebar.active {
+          display: block;
+          transform: translateX(0%);
+        }
+      }
+
+      /* Hide sidebar on large screens when not needed */
+      @media (min-width: 1025px) {
+        .product-sidebar.active {
+          display: block;
+          position: relative;
+          transform: none;
+        }
+      }
+
+      /* ------------------ Drawer Styling Fixes ------------------ */
+
+      /* Hide drawer globally by default */
+      .mobile-filter-drawer {
+        display: none;
+      }
+
+      /* Show only on small screens */
+      @media (max-width: 1024px) {
+        .mobile-filter-drawer {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background: var(--dark-green);
+          z-index: 1001;
+          box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+          display: block;
+        }
+
+        .drawer-toggle {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1.1rem;
+          font-family: var(--font-title);
+          background: var(--dark-green);
+          color: #fff;
+          border: none;
+          cursor: pointer;
+        }
+
+        .drawer-content {
+          max-height: 0;
+          overflow: hidden;
+          background: var(--pista);
+          transition: max-height 0.3s ease;
+        }
+
+        .drawer-content ul {
+          list-style: none;
+          margin: 0;
+          padding: 1rem;
+        }
+
+        .drawer-content li {
+          padding: 0.8rem 1rem;
+          border-bottom: 1px solid #ccc;
+          font-family: var(--font-main);
+          font-size: 1rem;
+          color: var(--dark-green);
+          cursor: pointer;
+        }
+
+        .drawer-content li:hover {
+          background: var(--dark-green);
+          color: #fff;
+        }
+      }
+
+      /* Hide on larger screens */
+      @media (min-width: 1025px) {
+        .mobile-filter-drawer {
+          display: none !important;
+        }
+      }
+
+      .product-sidebar {
+        position: fixed;
+        bottom: 56px; /* Height of drawer */
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+        overflow-y: auto;
+        background-color: var(--pista);
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        visibility: hidden;
+        z-index: 1100;
+      }
+
+      .product-sidebar.active {
+        transform: translateY(0%);
+        visibility: visible;
+      }
+    }
+
+    .product-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      padding: 0;
+      background-color: var(--pista);
+      margin: 2.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .product-page-layout {
+        flex-direction: column;
+      }
+
+      .product-sidebar {
+        width: 100%;
+      }
+    }
+    @media (min-width: 1025px) {
+      .mobile-filter-drawer {
+        display: none !important;
+      }
+
+      .product-sidebar {
+        position: relative !important;
+        transform: none !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        display: block !important;
+      }
+
+      .drawer-toggle,
+      .drawer-content {
+        display: none !important;
+      }
+    }
+  </style>
+    <!-- Sticky Premium Navbar -->
+    <nav class="v-sticky-navbar v-sticky-navbar-transparent" id="StickyNavbar">
+      <div class="v-navbar-inner">
+        <div class="v-navbar-left">
+          <!-- Two logos, toggle visibility with CSS -->
+          <img
+            src="../images/vintaraLogoGreen.svg"
+            alt="Vintara Logo green"
+            class="v-navbar-logo logo-white"
+          />
+          <img
+            src="../images/vintaraLogoGreen.svg"
+            alt="Vintara Logo Green"
+            class="v-navbar-logo logo-green"
+          />
+
+          <ul class="v-navbar-menu" id="navbarLinks">
+            <li><a href="index.html" class="v-navbar-link">Home</a></li>
+            <li>
+              <a href="products-main.html" class="v-navbar-link">Products</a>
+            </li>
+            <li><a href="about.html" class="v-navbar-link">About Us</a></li>
+            <li><a href="#blog" class="v-navbar-link">Blog</a></li>
+          </ul>
+        </div>
+        <div class="v-navbar-right">
+          <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
+          <button
+            class="v-navbar-hamburger"
+            id="vNavbarHamburger"
+            aria-label="Open menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
+        <ul>
+          <li><a href="index.html" class="v-navbar-link">Home</a></li>
+          <li>
+            <a href="products-main.html" class="v-navbar-link">Products</a>
+          </li>
+          <li><a href="about.html" class="v-navbar-link">About Us</a></li>
+          <li><a href="blog.html" class="v-navbar-link">Blog</a></li>
+          <li>
+            <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Products Grid -->
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>PLAIN SHOPPING BAGS</h1>
+    </section>
+
+    <!-- Sidebar + Product Grid Layout -->
+    <div class="product-page-layout">
+      <aside class="product-sidebar">
+        <ul>
+          <li>BRAND PROMOTION BAGS</li>
+          <li>CORPORATE ITEMS</li>
+          <li>SHOPPING BAGS</li>
+          <li>GIFT HAMPER BASKET</li>
+          <li>JUTE POUCHES</li>
+          <li>TOILETRY BAGS</li>
+          <li>GROW BAGS</li>
+          <li>FESTIVAL AND EVENT BAGS</li>
+          <li>FASHIONABLE BAGS</li>
+          <li>BOTTLE BAGS</li>
+          <li>JAR BAGS</li>
+          <li>LUNCH BAGS</li>
+          <li>STORAGE BASKET</li>
+          <li>WALL HANGING BAGS</li>
+          <li>LAUNDRY BAGS</li>
+          <li>YOGA MAT BAGS</li>
+        </ul>
+      </aside>
+
+      <!-- Mobile Filter Drawer (Bottom of screen) -->
+      <div class="mobile-filter-drawer" id="mobileFilterDrawer">
+        <button class="drawer-toggle" id="drawerToggle">
+          BRAND PROMOTION BAGS
+        </button>
+        <div class="drawer-content" id="drawerContent">
+          <ul id="mobileFilterList">
+            <li>BRAND PROMOTION BAGS</li>
+            <li>CORPORATE ITEMS</li>
+            <li>SHOPPING BAGS</li>
+            <li>GIFT HAMPER BASKET</li>
+            <li>JUTE POUCHES</li>
+            <li>TOILETRY BAGS</li>
+            <li>GROW BAGS</li>
+            <li>FESTIVAL AND EVENT BAGS</li>
+            <li>FASHIONABLE BAGS</li>
+            <li>BOTTLE BAGS</li>
+            <li>JAR BAGS</li>
+            <li>LUNCH BAGS</li>
+            <li>STORAGE BASKET</li>
+            <li>WALL HANGING BAGS</li>
+            <li>LAUNDRY BAGS</li>
+            <li>YOGA MAT BAGS</li> 
+          </ul>
+        </div>
+      </div>
+
+      <section class="product-grid">
+        <a href="../products-subcategory/Plain Shopping Bags/PS01.html" class="product-link">
+          <div class="product-card">
+            <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS01 (iMAGE 1).png" alt="PLAIN SHOPPING BAG 01" />
+            <h2>PLAIN SHOPPING BAG 01</h2>
+          </div>
+        </a>
+        <a href="../products-subcategory/Plain Shopping Bags/PS02.html" class="product-link">
+          <div class="product-card">
+            <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS02 (IMAGE 1).png" alt="PLAIN SHOPPING BAG 02" />
+            <h2>PLAIN SHOPPING BAG 02</h2>
+          </div>
+        </a>
+        <a href="../products-subcategory/Plain Shopping Bags/PS03.html" class="product-link">
+          <div class="product-card">
+            <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS03 (IMAGE 1).png" alt="PLAIN SHOPPING BAG 03" />
+            <h2>PLAIN SHOPPING BAG 03</h2>
+          </div>
+        </a>
+        <a href="../products-subcategory/Plain Shopping Bags/PS04.html" class="product-link">
+          <div class="product-card">
+            <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS04.png" alt="PLAIN SHOPPING BAG 04" />
+            <h2>PLAIN SHOPPING BAG 04</h2>
+          </div>
+        </a>
+        <a href="../products-subcategory/Plain Shopping Bags/PS05.html" class="product-link">
+          <div class="product-card">
+            <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS05.png" alt="PLAIN SHOPPING BAG 05" />
+            <h2>PLAIN SHOPPING BAG 05</h2>
+          </div>
+        </a>
+        <a href="../products-subcategory/Plain Shopping Bags/PS06.html" class="product-link">
+          <div class="product-card">
+            <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS06.png" alt="PLAIN SHOPPING BAG 06" />
+            <h2>PLAIN SHOPPING BAG 06</h2>
+          </div>
+        </a>
+        <a href="../products-subcategory/Plain Shopping Bags/PS07.html" class="product-link">
+          <div class="product-card">
+            <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS07.png" alt="PLAIN SHOPPING BAG 07" />
+            <h2>PLAIN SHOPPING BAG 07</h2>
+          </div>
+        </a>
+        <a href="../products-subcategory/Plain Shopping Bags/PS08.html" class="product-link">
+          <div class="product-card">
+            <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS08.png" alt="PLAIN SHOPPING BAG 08" />
+            <h2>PLAIN SHOPPING BAG 08</h2>
+          </div>
+        </a>
+        <a href="../products-subcategory/Plain Shopping Bags/PS09.html" class="product-link">
+          <div class="product-card">
+            <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS09.png" alt="PLAIN SHOPPING BAG 09" />
+            <h2>PLAIN SHOPPING BAG 09</h2>
+          </div>
+        </a>
+      </section>
+    </div>
+    <!-- Footer -->
+ 
+    <div id="footer"></div>
+    <script>
+      $("#header").load("header.html");
+        $( "#footer" ).load( "../footer.html" );
+      const drawerToggle = document.getElementById("drawerToggle");
+      const drawerContent = document.getElementById("drawerContent");
+      const mobileFilterList = document.getElementById("mobileFilterList");
+      const heroText = document.querySelector(".hero h1")?.textContent.trim();
+
+      // Set default to Hero title if nothing selected
+      if (drawerToggle && heroText) {
+        drawerToggle.textContent = heroText;
+      }
+
+      drawerToggle.addEventListener("click", () => {
+        const isOpen = drawerContent.style.maxHeight;
+        drawerContent.style.maxHeight = isOpen
+          ? null
+          : drawerContent.scrollHeight + "px";
+      });
+
+      // Update dropdown toggle text on click
+      mobileFilterList.addEventListener("click", (e) => {
+        if (e.target.tagName === "LI") {
+          const selected = e.target.textContent;
+          drawerToggle.textContent = selected;
+          drawerContent.style.maxHeight = null;
+        }
+      });
+    </script>
+
+    <script src="../about.js"></script>
+    <!-- Mobile Drawer Button (Fixed at bottom) -->
+  </body>
+</html>

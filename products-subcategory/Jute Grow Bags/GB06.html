@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="product.css"/>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-dvN1EwY1Tb+pXNEzU9IimM5/fTzvVboTQOljm8G+ef6kl7QjxXl8DJm4P9g5OAoI+uEAcvWE58WqE2sW+z+z1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../blog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <div id="header"></div>
+  <div class="container">
+    <div class="image-section">
+      <img src="../../images/OUR PRODUCTS/JUTE GROW BAGS 4.5/GB06 (IMAGE 1).png" alt="Product Image" class="main-image">
+      <div class="thumbnail-container">
+  <img src="../../images/OUR PRODUCTS/JUTE GROW BAGS 4.5/GB06 (IMAGE 1).png" class="thumbnail">      
+  <img src="../../images/OUR PRODUCTS/JUTE GROW BAGS 4.5/GB06 (IMAGE 2).png" class="thumbnail">
+</div>
+    </div>
+    <div class="content-section">
+      <div class="category-name">Jute Grow Bags </div>
+      <div class="product-name">Jute Grow Bag - 06</div>
+      <div class="product-code">
+        Product Code:
+        <input type="text" value="GB06" readonly>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="details">
+        <div><strong id="bold_details">Size: </strong>Fully Customizable as per your requirement</div>
+        <div><strong id="bold_details">Fabric: </strong>Natural Jute</div>
+        <div><strong id="bold_details">Handle Type: </strong>Self handle</div>
+        <div><strong id="bold_details">Print Details: </strong>All types of print are available, depending on the Quantity</div>
+        <div><strong id="bold_details">Other Customization: </strong>A ribbon or charm can be added.</div>
+        <div><strong id="bold_details">Other details: </strong>A Flower pot can be placed inside the bag</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <button class="enquiry-btn">Enquiry</button>
+    </div>
+  </div>
+  <div id="footer"></div>
+    <script>
+      $("#header").load("/header.html");
+        $( "#footer" ).load( "../../footer.html" );
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  const mainImage = document.querySelector('.main-image');
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      const newSrc = thumbnail.src;
+      mainImage.src = newSrc;
+
+      // Active thumbnail border logic (optional)
+      thumbnails.forEach(thumb => thumb.classList.remove('active-thumbnail'));
+      thumbnail.classList.add('active-thumbnail');
+    });
+  });
+</script>
+</body>
+</html>
