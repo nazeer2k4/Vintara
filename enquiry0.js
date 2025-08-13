@@ -28,7 +28,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     responseMsg.textContent = '';
 
     try {
-        const res = await fetch('http://localhost:5000/api/form', {
+        const res = await fetch('https://vintara.onrender.com/api/form', {
             method: 'POST',
             body: sendData
         });
@@ -45,4 +45,5 @@ document.getElementById('contactForm').addEventListener('submit', async function
         responseMsg.style.color = 'red';
     }
 });
+
 
