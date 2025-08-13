@@ -7,17 +7,18 @@ const path = require('path');
 
 const app = express();
 
-// Allow CORS from frontend (adjust origin as needed)
 app.use(cors({
     origin: function(origin, callback) {
-        // Allow requests with no origin (like mobile apps, curl, etc.)
+        console.log("CORS request from origin:", origin); // DEBUG
         if (!origin) return callback(null, true);
-        // Allow localhost and 127.0.0.1 on any port
         if (/^http:\/\/(localhost|127\.0\.0\.1):\d+$/.test(origin)) {
             return callback(null, true);
         }
-        // Allow your specific frontend (add more if needed)
-        if (origin === 'https://vintara-psi.vercel.app' || origin === 'https://vintara2.vercel.app'|| origin ==='https://vintara-mk3s72yv5-nazeer-anwars-projects.vercel.app') {
+        if ([
+            'https://vintara-psi.vercel.app',
+            'https://vintara2.vercel.app',
+            'https://vintara-mk3s72yv5-nazeer-anwars-projects.vercel.app'
+        ].includes(origin)) {
             return callback(null, true);
         }
         return callback(new Error('Not allowed by CORS'));
@@ -41,6 +42,7 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
 
