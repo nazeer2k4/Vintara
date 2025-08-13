@@ -128,7 +128,6 @@ h3 {
   }
 }
 
-
 /* New Premium Hero Section */
 .premium-hero {
   margin-top: 0 !important;
@@ -1713,7 +1712,7 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
 
 /* ENQUIRE button */
 .v-btn.v-navbar-enquire {
-  border: 2px solid var(--primary);
+  border: 2px solid var(--primary) !important;
   color: var(--primary);
   background: transparent;
   padding: 0.6rem 1.2rem;
