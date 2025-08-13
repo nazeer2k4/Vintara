@@ -17,7 +17,7 @@ app.use(cors({
             return callback(null, true);
         }
         // Allow your specific frontend (add more if needed)
-        if (origin === 'http://localhost:5500' || origin === 'https://vintara2.vercel.app/') {
+        if (origin === 'https://vintara-psi.vercel.app/' || origin === 'https://vintara2.vercel.app/') {
             return callback(null, true);
         }
         return callback(new Error('Not allowed by CORS'));
@@ -41,4 +41,5 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
