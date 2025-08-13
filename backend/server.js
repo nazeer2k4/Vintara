@@ -17,7 +17,7 @@ app.use(cors({
             return callback(null, true);
         }
         // Allow your specific frontend (add more if needed)
-        if (origin === 'https://vintara-psi.vercel.app/' || origin === 'https://vintara2.vercel.app/'|| origin ==='https://vintara-mk3s72yv5-nazeer-anwars-projects.vercel.app/') {
+        if (origin === 'https://vintara-psi.vercel.app' || origin === 'https://vintara2.vercel.app'|| origin ==='https://vintara-mk3s72yv5-nazeer-anwars-projects.vercel.app') {
             return callback(null, true);
         }
         return callback(new Error('Not allowed by CORS'));
@@ -41,6 +41,7 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
 
