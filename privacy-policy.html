@@ -12,6 +12,24 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Public+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="about.css" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <style>
       :root {
@@ -80,117 +98,6 @@
         --navbar-shadow: 0 8px 32px rgba(12, 72, 51, 0.13);
         --navbar-hover: #176b4c;
         --white: #fff;
-      }
-      /* === NAVBAR === */
-      .v-sticky-navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-        height: 90px;
-        display: flex;
-        align-items: center;
-        background: var(--navbar-bg);
-        backdrop-filter: blur(18px) saturate(180%);
-        box-shadow: var(--navbar-shadow);
-        transition: background-color 0.4s ease, backdrop-filter 0.4s ease,
-          box-shadow 0.4s ease;
-      }
-
-      .v-navbar-inner {
-        width: 100%;
-        max-width: 1440px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 2rem;
-        height: 100%;
-      }
-
-      .v-navbar-left {
-        display: flex;
-        align-items: center;
-      }
-
-      .v-navbar-logo {
-        height: 200px;
-        margin: 0;
-        padding: 8px;
-        margin-right: 2rem;
-        transition: 0.3s ease;
-      }
-
-      /* Logo visibility on scroll */
-      .v-sticky-navbar-scrolled .logo-white {
-        display: none;
-      }
-      .v-sticky-navbar-scrolled .logo-green {
-        display: block;
-      }
-
-      /* For index page: always show green logo */
-      body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-green {
-        display: block;
-      }
-      body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
-        display: none;
-      }
-
-      .v-navbar-menu {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .v-navbar-link {
-        font-family: var(--font-title);
-        font-size: 1.1rem;
-        font-weight: 700;
-        text-decoration: none;
-        color: var(--primary);
-        transition: color 0.3s ease;
-        position: relative;
-      }
-      .v-navbar-link::after {
-        content: "";
-        position: absolute;
-        width: 0%;
-        height: 2px;
-        background: var(--primary);
-        left: 0;
-        bottom: -4px;
-        transition: width 0.3s ease;
-      }
-      .v-navbar-link:hover::after {
-        width: 100%;
-      }
-
-      /* ENQUIRE button */
-      .v-btn.v-navbar-enquire {
-        font-family: "League Spartan", sans-serif;
-        border: 2px solid var(--primary) !important;
-        color: var(--primary);
-        background: transparent;
-        padding: 0.6rem 1.2rem;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        text-decoration: none; /* ✅ Fix underline */
-      }
-      .v-btn.v-navbar-enquire:hover {
-        background: var(--secondary);
-        color: var(--primary);
-      }
-
-      @media (max-width: 1024px) {
-        .v-navbar-right .v-btn.v-navbar-enquire {
-          display: none !important;
-        }
       }
 
       /* === HAMBURGER MENU === */
@@ -729,63 +636,7 @@
     </style>
   </head>
   <body>
-    <!-- Sticky Premium Navbar -->
-    <nav class="v-sticky-navbar v-sticky-navbar-transparent" id="StickyNavbar">
-      <div class="v-navbar-inner">
-        <div class="v-navbar-left">
-          <!-- Two logos, toggle visibility with CSS -->
-          <img
-            src="images/vintaraLogoWhite.svg"
-            alt="Vintara Logo White"
-            class="v-navbar-logo logo-white"
-          />
-          <img
-            src="images/vintaraLogoGreen.svg"
-            alt="Vintara Logo Green"
-            class="v-navbar-logo logo-green"
-          />
-
-          <ul class="v-navbar-menu" id="navbarLinks">
-            <li><a href="/index.html" class="v-navbar-link">Home</a></li>
-            <li>
-              <a href="/products-main.html" class="v-navbar-link">Products</a>
-            </li>
-            <li><a href="/about.html" class="v-navbar-link">About Us</a></li>
-            <li><a href="/blog.html" class="v-navbar-link">Blog</a></li>
-          </ul>
-        </div>
-        <div class="v-navbar-right">
-          <a href="enquiry0.html" class="v-btn v-navbar-enquire">Enquiry</a>
-          <button
-            class="v-navbar-hamburger"
-            id="vNavbarHamburger"
-            aria-label="Open menu"
-          >
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </div>
-      <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
-        <div class="v-mobile-logo-container">
-          <img
-            src="images/vintaraNavbarLogo.svg"
-            alt="Vintara Logo"
-            class="v-mobile-logo"
-          />
-        </div>
-        <ul>
-          <li><a href="/index.html" class="v-navbar-link">Home</a></li>
-          <li>
-            <a href="/products-main.html" class="v-navbar-link">Products</a>
-          </li>
-          <li><a href="/about.html" class="v-navbar-link">About Us</a></li>
-          <li><a href="/blog.html" class="v-navbar-link">Blog</a></li>
-          <li>
-            <a href="enquiry0.html" class="v-btn v-navbar-enquire">Enquiry</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div id="header"></div>
     <div class="site">
       <main>
         <div class="container">
@@ -988,125 +839,10 @@
         </div>
       </main>
     </div>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-container">
-        <div class="footer-column">
-          <h2>VINTARA INTERNATIONAL</h2>
-          <p><strong>Phone No:</strong> +91 93049 30058</p>
-          <p>
-            <strong>Email:</strong>
-            <a href="mailto:info@vintarainternational.com"
-              >info@vintarainternational.com</a
-            >
-          </p>
-          <p>
-            <strong>Address:</strong>Cossipore, Kolkata, West Bengal - 700002
-          </p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-column">
-          <h2>Products</h2>
-          <div class="products-grid">
-            <ul>
-              <li>
-                <a href="/products-subcategory/brandpromotion.html"
-                  >Brand Promotion Bags</a
-                >
-              </li>
-              <li>
-                <a href="/products-subcategory/corporateitems.html"
-                  >Corporate Items</a
-                >
-              </li>
-              <li>
-                <a href="/products-subcategory/shoppingbags.html"
-                  >Jute Shopping Bags</a
-                >
-              </li>
-              <li>
-                <a href="/products-subcategory/gifthamperbasket.html"
-                  >Gift HAMPER Bags</a
-                >
-              </li>
-              <li>
-                <a href="/products-subcategory/jutepouches.html"
-                  >Jute Pouches</a
-                >
-              </li>
-              <li>
-                <a href="/products-subcategory/toiletrybags.html"
-                  >Toiletry Bags</a
-                >
-              </li>
-              <li>
-                <a href="/products-subcategory/growbags.html">Jute Grow Bags</a>
-              </li>
-              <li>
-                <a href="/products-subcategory/festivalandeventbags.html"
-                  >Festival & Event Bags</a
-                >
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a href="/products-subcategory/fashionablebags.html"
-                  >Fashionable Bags</a
-                >
-              </li>
-              <li>
-                <a href="/products-subcategory/bottlebags.html">Bottle Bags</a>
-              </li>
-              <li>
-                <a href="/products-subcategory/jarbags.html">Jute Jar Bags</a>
-              </li>
-              <li>
-                <a href="/products-subcategory/lunchbags.html"
-                  >Jute Lunch Bags</a
-                >
-              </li>
-              <li>
-                <a href="/products-subcategory/storagebasket.html"
-                  >Storage Basket</a
-                >
-              </li>
-              <li>
-                <a href="/products-subcategory/wallhangingbags.html"
-                  >Wall Hanging Bags</a
-                >
-              </li>
-              <li>
-                <a href="/products-subcategory/laundrybags.html"
-                  >Laundry Bags</a
-                >
-              </li>
-              <li>
-                <a href="/products-subcategory/yogamatbags.html"
-                  >Yoga Mat Bags</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-column">
-          <h2>Important Links</h2>
-          <ul>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        Copyright © 2025 Vintara International. All Rights Reserved.
-      </div>
-    </footer>
+    <div id="footer"></div>
+    <script>
+        $("#header").load("header.html");
+        $( "#footer" ).load( "footer.html" );
+    </script>
   </body>
 </html>
