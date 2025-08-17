@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy • Vintara</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Public+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --pista: #f6ffec;
+        --dark: #0c4833;
+        --ink: #0a3a2a; /* slightly darker for subtle contrast details */
+        --muted: rgba(12, 72, 51, 0.6);
+        --card: #ffffff;
+        --radius: 16px;
+        --shadow: 0 10px 30px rgba(12, 72, 51, 0.08);
+      }
+
+      /* Base */
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--pista);
+        color: var(--dark);
+        font-family: "Public Sans", system-ui, -apple-system, Segoe UI, Roboto,
+          Arial, sans-serif;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      html {
+        scroll-behavior: smooth;
+        background: var(--background);
+      }
+      body {
+        font-family: var(--font-main);
+        background: var(--background);
+        color: var(--text);
+        line-height: 1.7;
+        min-height: 100vh;
+        font-size: 1.08rem;
+        letter-spacing: 0.01em;
+        transition: var(--transition);
+        overflow-x: hidden;
+      }
+
+      header,
+      section,
+      footer {
+        width: 100%;
+      }
+      :root {
+        --primary: #0c4833; /* Dark Green */
+        --secondary: #f6ffec; /* Pista */
+        --accent: #0c4833; /* Use dark green as accent for consistency */
+        --background: #f6ffec; /* Pista */
+        --text: #0c4833; /* Dark Green for text */
+        --cta: #0c4833; /* Dark Green for call to action */
+        --cta-gradient: linear-gradient(90deg, #0c4833 0%, #f6ffec 100%);
+        --shadow: 0 4px 24px rgba(12, 72, 51, 0.08);
+        --shadow-hover: 0 8px 32px rgba(12, 72, 51, 0.16);
+        --radius: 18px;
+        --font-title: "League Spartan", "Playfair Display", Arial, sans-serif;
+        --font-main: "Public Sans", "Inter", "DM Sans", Arial, sans-serif;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --section-padding: 5.5rem 0 4.5rem 0;
+        --container-max: 1200px;
+        --navbar-bg: rgba(255, 255, 255, 0.65);
+        --navbar-shadow: 0 8px 32px rgba(12, 72, 51, 0.13);
+        --navbar-hover: #176b4c;
+        --white: #fff;
+      }
+      /* === NAVBAR === */
+      .v-sticky-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        background: var(--navbar-bg);
+        backdrop-filter: blur(18px) saturate(180%);
+        box-shadow: var(--navbar-shadow);
+        transition: background-color 0.4s ease, backdrop-filter 0.4s ease,
+          box-shadow 0.4s ease;
+      }
+
+      .v-navbar-inner {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        height: 100%;
+      }
+
+      .v-navbar-left {
+        display: flex;
+        align-items: center;
+      }
+
+      .v-navbar-logo {
+        height: 200px;
+        margin: 0;
+        padding: 8px;
+        margin-right: 2rem;
+        transition: 0.3s ease;
+      }
+
+      /* Logo visibility on scroll */
+      .v-sticky-navbar-scrolled .logo-white {
+        display: none;
+      }
+      .v-sticky-navbar-scrolled .logo-green {
+        display: block;
+      }
+
+      /* For index page: always show green logo */
+      body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-green {
+        display: block;
+      }
+      body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
+        display: none;
+      }
+
+      .v-navbar-menu {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .v-navbar-link {
+        font-family: var(--font-title);
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--primary);
+        transition: color 0.3s ease;
+        position: relative;
+      }
+      .v-navbar-link::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background: var(--primary);
+        left: 0;
+        bottom: -4px;
+        transition: width 0.3s ease;
+      }
+      .v-navbar-link:hover::after {
+        width: 100%;
+      }
+
+      /* ENQUIRE button */
+      .v-btn.v-navbar-enquire {
+        font-family: "League Spartan", sans-serif;
+        border: 2px solid var(--primary) !important;
+        color: var(--primary);
+        background: transparent;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        text-decoration: none; /* ✅ Fix underline */
+      }
+      .v-btn.v-navbar-enquire:hover {
+        background: var(--secondary);
+        color: var(--primary);
+      }
+
+      @media (max-width: 1024px) {
+        .v-navbar-right .v-btn.v-navbar-enquire {
+          display: none !important;
+        }
+      }
+
+      /* === HAMBURGER MENU === */
+      .v-navbar-hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        background: none;
+        border: none; /* This removes the border */
+        cursor: pointer;
+        z-index: 1200;
+        transition: all 0.3s ease;
+      }
+      .v-navbar-hamburger span {
+        height: 3px;
+        width: 24px;
+        background: var(--primary);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+      }
+
+      /* Hamburger animation when active */
+      .v-navbar-hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+
+      .v-navbar-hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .v-navbar-hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
+      /* Hide hamburger on desktop, show on mobile/tablet */
+      @media (max-width: 1024px) {
+        .v-navbar-menu {
+          display: none !important;
+        }
+        .v-navbar-hamburger {
+          display: flex !important;
+        }
+        .v-navbar-right .v-btn.v-navbar-enquire {
+          display: none !important;
+        }
+      }
+
+      /* Ensure hamburger is hidden on larger screens */
+      @media (min-width: 1025px) {
+        .v-navbar-hamburger {
+          display: none !important;
+        }
+        .v-navbar-menu {
+          display: flex !important;
+        }
+        .v-navbar-right .v-btn.v-navbar-enquire {
+          display: inline-block !important;
+        }
+      }
+
+      /* === MOBILE MENU === */
+      .v-mobile-logo-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* margin-bottom: 2.5rem; */
+      }
+
+      .v-mobile-logo {
+        max-width: 240px;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+
+      .v-mobile-logo:hover {
+        transform: scale(1.05);
+      }
+
+      .v-navbar-mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 30vw;
+        max-width: 280px;
+        background: var(--secondary);
+        /* background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(18px) saturate(180%);
+    box-shadow: 0 8px 32px rgba(12, 72, 51, 0.13); */
+        padding: 5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1100;
+      }
+
+      .v-navbar-mobile-menu.active {
+        transform: translateX(0%);
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .v-navbar-mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .v-navbar-mobile-menu .v-navbar-link {
+        font-size: 1.2rem;
+        font-family: var(--font-title);
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .v-navbar-mobile-menu .v-navbar-link:hover {
+        color: var(--navbar-hover);
+      }
+
+      .v-navbar-mobile-menu .v-btn.v-navbar-enquire {
+        margin-top: 1rem;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        background: transparent;
+        padding: 0.6rem 1.2rem;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none; /* ✅ Fix underline */
+      }
+      .v-navbar-mobile-menu ul li {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      .v-navbar-mobile-menu.active ul li {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      /* Responsive width on small screens */
+      @media (max-width: 480px) {
+        .v-navbar-mobile-menu {
+          width: 100vw; /* Full width on very small screens */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .v-navbar-mobile-menu {
+          width: 100%;
+          padding: 4rem 1.2rem;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .v-navbar-inner {
+          padding: 0 1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .about-content h1 {
+          font-size: 2.4rem;
+        }
+        .about-content p {
+          font-size: 1rem;
+        }
+
+        .v-navbar-mobile-menu {
+          width: 100%;
+          padding: 5rem 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .v-navbar-mobile-menu {
+          padding: 4rem 1rem;
+        }
+
+        .v-navbar-mobile-menu .v-navbar-link {
+          font-size: 1.1rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .v-sticky-navbar {
+          height: 90px; /* Reduce from 100px to 70px (or any size you prefer) */
+        }
+
+        .v-navbar-logo {
+          height: 180px; /* Also scale logo to match smaller navbar */
+        }
+      }
+
+      .v-navbar-hamburger,
+      .v-navbar-hamburger * {
+        border: none !important;
+        box-shadow: none !important;
+      }
+      /* ENQUIRE button */
+      .v-btn.v-navbar-enquire {
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        background: transparent;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        text-decoration: none; /* ✅ Fix underline */
+      }
+      .v-btn.v-navbar-enquire:hover {
+        background: var(--secondary);
+        color: var(--primary);
+      }
+      .v-sticky-navbar-scrolled .v-btn.v-navbar-enquire {
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        background: var(--secondary);
+      }
+
+      @media (max-width: 1024px) {
+        .v-navbar-right .v-btn.v-navbar-enquire {
+          display: none !important;
+        }
+      }
+      .v-navbar-mobile-menu .v-btn.v-navbar-enquire {
+        margin-top: 1rem;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        background: transparent;
+        padding: 0.6rem 1.2rem;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none; /* ✅ Fix underline */
+      }
+      /* Layout */
+      .site {
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(6px);
+        background: color-mix(in hsl, var(--pista) 80%, white);
+        border-bottom: 1px solid rgba(12, 72, 51, 0.08);
+        z-index: 10;
+      }
+      .bar {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 18px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--dark);
+      }
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: var(--dark);
+        display: grid;
+        place-items: center;
+        color: var(--pista);
+        font-family: "League Spartan", system-ui, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        font-size: 18px;
+        box-shadow: var(--shadow);
+        user-select: none;
+      }
+      .brand-name {
+        font-family: "League Spartan", system-ui, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+      }
+
+      main {
+        flex: 1;
+      }
+      .container {
+        max-width: 900px;
+        margin: 40px auto 80px;
+        padding: 0 20px;
+      }
+
+      /* Card */
+      .card {
+        background: var(--card);
+        border: 1px solid rgba(12, 72, 51, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .card-header {
+        padding: 28px 28px 0 28px;
+      }
+      .title {
+        margin: 0 0 6px 0;
+        font-family: "League Spartan", system-ui, sans-serif;
+        font-weight: 700;
+        font-size: clamp(28px, 4vw, 40px);
+        line-height: 1.15;
+        letter-spacing: 0.4px;
+        color: var(--dark);
+      }
+      .subtitle {
+        margin: 0 0 22px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .divider {
+        width: 100%;
+        height: 1px;
+        background: rgba(12, 72, 51, 0.08);
+      }
+      .card-body {
+        padding: 24px 28px 28px 28px;
+      }
+
+      /* Content */
+      p {
+        margin: 0 0 16px;
+      }
+      h2 {
+        margin: 28px 0 10px;
+        font-family: "League Spartan", system-ui, sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.3px;
+        color: var(--ink);
+      }
+      ol,
+      ul {
+        margin: 0 0 16px 1.2em;
+        padding: 0;
+      }
+      li {
+        margin: 8px 0;
+      }
+      .kicker {
+        display: inline-block;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 12px;
+      }
+
+      /* Info grid (contact & meta) */
+      .info {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+      .info a {
+        color: var(--dark);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      @media (min-width: 720px) {
+        .info {
+          grid-template-columns: 1fr auto;
+          align-items: center;
+        }
+      }
+
+      /* Footer */
+      /* General footer styling */
+      footer {
+        background-image: url("/images/END BACKGROUND.jpg");
+        color: #eee;
+        padding: 40px 20px 20px;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-column {
+        flex: 1 1 250px;
+        margin: 30px;
+        min-width: 200px;
+      }
+
+      .footer-column h2 {
+        font-family: "League Spartan", sans-serif;
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      .footer-column p,
+      .footer-column a {
+        color: #dfdfdf;
+        font-size: 14px;
+        line-height: 1.5;
+        text-decoration: none;
+        font-family: "Public Sans", sans-serif;
+      }
+
+      .footer-column a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 8px;
+      }
+
+      .products-grid {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .products-grid ul {
+        flex: 1 1 150px;
+      }
+
+      .social-icons {
+        margin-top: 15px;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        margin-right: 10px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        padding: 10px;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        line-height: 20px;
+        font-size: 20px;
+        color: #0c4833;
+        transition: background-color 0.3s;
+      }
+
+      .social-icons a:hover {
+        background-color: #689f38;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        font-size: 14px;
+        color: #aaa;
+        border-top: 1px solid #444;
+        margin-top: 20px;
+      }
+      @media (max-width: 440px) {
+        .products-grid ul {
+          flex: 1 1 45%; /* Force two columns */
+        }
+
+        .footer-column ul li a {
+          font-size: 12px; /* Smaller font for better fit */
+        }
+
+        .footer-column ul li {
+          margin-bottom: 6px; /* Slightly tighter spacing */
+        }
+      }
+      @media (max-width: 600px) {
+        .footer-column ul li a {
+          font-size: 13px;
+        }
+      }
+      @media (max-width: 440px) {
+        .footer-column ul li a {
+          font-size: 12px;
+        }
+      }
+      @media (max-width: 440px) {
+        .products-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+          gap: 10px 20px;
+        }
+
+        .products-grid ul {
+          padding-left: 0;
+          margin: 0;
+        }
+
+        .products-grid ul li a {
+          font-size: 12px; /* Keep small text as requested */
+        }
+
+        .footer-column ul li {
+          margin-bottom: 6px;
+        }
+      }
+
+      @media (min-width: 441px) and (max-width: 768px) {
+        .products-grid {
+          display: flex;
+          gap: 30px;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sticky Premium Navbar -->
+    <nav class="v-sticky-navbar v-sticky-navbar-transparent" id="StickyNavbar">
+      <div class="v-navbar-inner">
+        <div class="v-navbar-left">
+          <!-- Two logos, toggle visibility with CSS -->
+          <img
+            src="images/vintaraLogoWhite.svg"
+            alt="Vintara Logo White"
+            class="v-navbar-logo logo-white"
+          />
+          <img
+            src="images/vintaraLogoGreen.svg"
+            alt="Vintara Logo Green"
+            class="v-navbar-logo logo-green"
+          />
+
+          <ul class="v-navbar-menu" id="navbarLinks">
+            <li><a href="/index.html" class="v-navbar-link">Home</a></li>
+            <li>
+              <a href="/products-main.html" class="v-navbar-link">Products</a>
+            </li>
+            <li><a href="/about.html" class="v-navbar-link">About Us</a></li>
+            <li><a href="/blog.html" class="v-navbar-link">Blog</a></li>
+          </ul>
+        </div>
+        <div class="v-navbar-right">
+          <a href="enquiry0.html" class="v-btn v-navbar-enquire">Enquiry</a>
+          <button
+            class="v-navbar-hamburger"
+            id="vNavbarHamburger"
+            aria-label="Open menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
+        <div class="v-mobile-logo-container">
+          <img
+            src="images/vintaraNavbarLogo.svg"
+            alt="Vintara Logo"
+            class="v-mobile-logo"
+          />
+        </div>
+        <ul>
+          <li><a href="/index.html" class="v-navbar-link">Home</a></li>
+          <li>
+            <a href="/products-main.html" class="v-navbar-link">Products</a>
+          </li>
+          <li><a href="/about.html" class="v-navbar-link">About Us</a></li>
+          <li><a href="/blog.html" class="v-navbar-link">Blog</a></li>
+          <li>
+            <a href="enquiry0.html" class="v-btn v-navbar-enquire">Enquiry</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="site">
+      <main>
+        <div class="container">
+          <article class="card" role="article" aria-labelledby="pp-title">
+            <div class="card-header">
+              <p class="kicker">Policy</p>
+              <h1 class="title" id="pp-title">Privacy Policy</h1>
+              <p class="subtitle">
+                At Vintara International, we are committed to protecting your
+                privacy and safeguarding your personal information. This Privacy
+                Policy explains how we collect, use, and secure your data when
+                you interact with our website, products, or services. By using
+                our website, you agree to the practices described below.
+              </p>
+
+              <div class="divider" aria-hidden="true"></div>
+            </div>
+
+            <div class="card-body">
+              <section aria-labelledby="s1">
+                <h2 id="s1">1. Company Information</h2>
+                <p>
+                  <strong>Legal Name:</strong> Vintara International<br />
+                  <strong>Brand Name:</strong> Vintara
+                </p>
+              </section>
+
+              <section aria-labelledby="s2">
+                <h2 id="s2">2. Information We Collect</h2>
+                <p>
+                  We collect information to enhance your experience and deliver
+                  improved services. This may include:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Personal Identification Information:</strong> Name,
+                    email address, phone number, billing/shipping address.
+                  </li>
+                  <li>
+                    <strong>Transaction Data:</strong> Payment details, order
+                    history, invoices, and delivery information.
+                  </li>
+                  <li>
+                    <strong>Technical Data:</strong> IP address, browser type,
+                    operating system, and cookies.
+                  </li>
+                  <li>
+                    <strong>Marketing Preferences:</strong> Your choices
+                    regarding newsletters, offers, and updates.
+                  </li>
+                </ul>
+              </section>
+
+              <section aria-labelledby="s3">
+                <h2 id="s3">3. How We Use Your Information</h2>
+                <p>Your information helps us to:</p>
+                <ul>
+                  <li>Process and deliver your orders.</li>
+                  <li>
+                    Communicate with you regarding inquiries, orders, or
+                    support.
+                  </li>
+                  <li>Provide personalised experiences on our website.</li>
+                  <li>
+                    Send updates, special offers, and promotional material.
+                  </li>
+                  <li>Comply with legal and regulatory requirements.</li>
+                </ul>
+                <p>
+                  We do not sell, rent, or misuse your personal information.
+                  Data is only shared with trusted partners (such as shipping
+                  and payment providers) when necessary.
+                </p>
+              </section>
+
+              <section aria-labelledby="s4">
+                <h2 id="s4">4. Cookies and Tracking Technologies</h2>
+                <p>
+                  We use cookies to make your browsing experience smoother.
+                  Cookies allow us to:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Analyze:</strong> Track website traffic and improve
+                    performance.
+                  </li>
+                  <li>
+                    <strong>Enhance:</strong> Remember your preferences and
+                    provide tailored content.
+                  </li>
+                  <li>
+                    <strong>Advertise:</strong> Deliver relevant promotions
+                    based on your browsing behavior.
+                  </li>
+                </ul>
+                <p>
+                  You may disable cookies through your browser settings, but
+                  doing so may affect certain website functions.
+                </p>
+              </section>
+
+              <section aria-labelledby="s5">
+                <h2 id="s5">5. Third-Party Service Providers</h2>
+                <p>
+                  To deliver our services efficiently, we may share data with:
+                </p>
+                <ul>
+                  <li>Payment processors.</li>
+                  <li>Logistics and shipping partners.</li>
+                  <li>Website analytics and marketing tools.</li>
+                </ul>
+                <p>
+                  All third parties we work with are required to protect your
+                  data and are restricted from using it for unrelated purposes.
+                </p>
+              </section>
+
+              <section aria-labelledby="s6">
+                <h2 id="s6">6. Data Security</h2>
+                <p>
+                  We implement industry-standard measures such as encryption and
+                  secure servers to protect your personal data. While we strive
+                  for complete security, no online transmission is 100%
+                  risk-free.
+                </p>
+              </section>
+
+              <section aria-labelledby="s7">
+                <h2 id="s7">7. Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                  <li>
+                    <strong>Access</strong> – Request a copy of your personal
+                    data.
+                  </li>
+                  <li>
+                    <strong>Correct</strong> – Update any incorrect or
+                    incomplete information.
+                  </li>
+                  <li>
+                    <strong>Delete</strong> – Request removal of your personal
+                    data (where legally possible).
+                  </li>
+                  <li>
+                    <strong>Opt-Out</strong> – Unsubscribe from marketing
+                    communications anytime.
+                  </li>
+                </ul>
+                <p>
+                  To exercise these rights, please reach out to us directly.
+                </p>
+              </section>
+
+              <section aria-labelledby="s8">
+                <h2 id="s8">8. Retention of Data</h2>
+                <p>
+                  We retain your personal data only for as long as required to
+                  fulfill the purpose for which it was collected or as required
+                  by law. Once no longer needed, your information will be
+                  securely deleted or anonymized.
+                </p>
+              </section>
+
+              <section aria-labelledby="s9">
+                <h2 id="s9">9. International Data Transfers</h2>
+                <p>
+                  If you access our website from outside India, your data may be
+                  processed in India or in other countries where our service
+                  partners operate. By using our website, you consent to these
+                  transfers.
+                </p>
+              </section>
+
+              <section aria-labelledby="s10">
+                <h2 id="s10">10. Changes to This Policy</h2>
+                <p>
+                  We may revise this Privacy Policy occasionally. Updates will
+                  be posted here, and continued use of our website will indicate
+                  your acceptance of these changes.
+                </p>
+              </section>
+
+              <section aria-labelledby="s11">
+                <h2 id="s11">11. Contact Information</h2>
+                <p>
+                  If you have questions or concerns regarding this Privacy
+                  Policy, please contact us:
+                </p>
+                <p>
+                  <strong>Email:</strong>
+                  <a href="mailto:info@vintarainternational.com"
+                    >info@vintarainternational.com</a
+                  ><br />
+                  <strong>Phone:</strong>
+                  <a href="tel:+919304930058">+91 9304930058</a>
+                </p>
+              </section>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h2>VINTARA INTERNATIONAL</h2>
+          <p><strong>Phone No:</strong> +91 93049 30058</p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:info@vintarainternational.com"
+              >info@vintarainternational.com</a
+            >
+          </p>
+          <p>
+            <strong>Address:</strong>Cossipore, Kolkata, West Bengal - 700002
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h2>Products</h2>
+          <div class="products-grid">
+            <ul>
+              <li>
+                <a href="/products-subcategory/brandpromotion.html"
+                  >Brand Promotion Bags</a
+                >
+              </li>
+              <li>
+                <a href="/products-subcategory/corporateitems.html"
+                  >Corporate Items</a
+                >
+              </li>
+              <li>
+                <a href="/products-subcategory/shoppingbags.html"
+                  >Jute Shopping Bags</a
+                >
+              </li>
+              <li>
+                <a href="/products-subcategory/gifthamperbasket.html"
+                  >Gift HAMPER Bags</a
+                >
+              </li>
+              <li>
+                <a href="/products-subcategory/jutepouches.html"
+                  >Jute Pouches</a
+                >
+              </li>
+              <li>
+                <a href="/products-subcategory/toiletrybags.html"
+                  >Toiletry Bags</a
+                >
+              </li>
+              <li>
+                <a href="/products-subcategory/growbags.html">Jute Grow Bags</a>
+              </li>
+              <li>
+                <a href="/products-subcategory/festivalandeventbags.html"
+                  >Festival & Event Bags</a
+                >
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="/products-subcategory/fashionablebags.html"
+                  >Fashionable Bags</a
+                >
+              </li>
+              <li>
+                <a href="/products-subcategory/bottlebags.html">Bottle Bags</a>
+              </li>
+              <li>
+                <a href="/products-subcategory/jarbags.html">Jute Jar Bags</a>
+              </li>
+              <li>
+                <a href="/products-subcategory/lunchbags.html"
+                  >Jute Lunch Bags</a
+                >
+              </li>
+              <li>
+                <a href="/products-subcategory/storagebasket.html"
+                  >Storage Basket</a
+                >
+              </li>
+              <li>
+                <a href="/products-subcategory/wallhangingbags.html"
+                  >Wall Hanging Bags</a
+                >
+              </li>
+              <li>
+                <a href="/products-subcategory/laundrybags.html"
+                  >Laundry Bags</a
+                >
+              </li>
+              <li>
+                <a href="/products-subcategory/yogamatbags.html"
+                  >Yoga Mat Bags</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h2>Important Links</h2>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Copyright © 2025 Vintara International. All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+</html>
