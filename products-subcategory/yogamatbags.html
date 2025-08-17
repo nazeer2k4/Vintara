@@ -102,7 +102,7 @@
         <a href="../products-subcategory/Yoga Mat Bags/YM01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/YOGA MAT BAGS 4.5/YM01.png" alt="YOGA MAT BAGS YM01" />
-            <h2>YOGA MAT BAGS 01</h2>
+            <h2>YOGA MAT BAGS-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Yoga Mat Bags/YM02.html" class="product-link">
@@ -111,7 +111,7 @@
               src="../images/OUR PRODUCTS/YOGA MAT BAGS 4.5/YM02.png"
               alt="YOGA MAT BAGS 02"
             />
-            <h2>YOGA MAT BAGS 02</h2>
+            <h2>YOGA MAT BAGS-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Yoga Mat Bags/YM03.html" class="product-link">
@@ -120,7 +120,7 @@
               src="../images/OUR PRODUCTS/YOGA MAT BAGS 4.5/YM03.png"
               alt="YOGA MAT BAGS 03"
             />
-            <h2>YOGA MAT BAGS 03</h2>
+            <h2>YOGA MAT BAGS-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Yoga Mat Bags/YM04.html" class="product-link">
@@ -129,7 +129,7 @@
               src="../images/OUR PRODUCTS/YOGA MAT BAGS 4.5/YM04.png"
               alt="YOGA MAT BAGS 04"
             />
-            <h2>YOGA MAT BAGS 04</h2>
+            <h2>YOGA MAT BAGS-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Yoga Mat Bags/YM05.html" class="product-link">
@@ -138,7 +138,7 @@
               src="../images/OUR PRODUCTS/YOGA MAT BAGS 4.5/YM05.png"
               alt="YOGA MAT BAGS 05"
             />
-            <h2>YOGA MAT BAGS 05</h2>
+            <h2>YOGA MAT BAGS-05</h2>
           </div>
         </a>
       </section>
@@ -174,6 +174,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

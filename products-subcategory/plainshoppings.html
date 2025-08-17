@@ -101,55 +101,55 @@
         <a href="../products-subcategory/Plain Shopping Bags/PS01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS01 (iMAGE 1).png" alt="PLAIN SHOPPING BAG 01" />
-            <h2>PLAIN SHOPPING BAG 01</h2>
+            <h2>PLAIN SHOPPING BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Plain Shopping Bags/PS02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS02 (IMAGE 1).png" alt="PLAIN SHOPPING BAG 02" />
-            <h2>PLAIN SHOPPING BAG 02</h2>
+            <h2>PLAIN SHOPPING BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Plain Shopping Bags/PS03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS03 (IMAGE 1).png" alt="PLAIN SHOPPING BAG 03" />
-            <h2>PLAIN SHOPPING BAG 03</h2>
+            <h2>PLAIN SHOPPING BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Plain Shopping Bags/PS04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS04.png" alt="PLAIN SHOPPING BAG 04" />
-            <h2>PLAIN SHOPPING BAG 04</h2>
+            <h2>PLAIN SHOPPING BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Plain Shopping Bags/PS05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS05.png" alt="PLAIN SHOPPING BAG 05" />
-            <h2>PLAIN SHOPPING BAG 05</h2>
+            <h2>PLAIN SHOPPING BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Plain Shopping Bags/PS06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS06.png" alt="PLAIN SHOPPING BAG 06" />
-            <h2>PLAIN SHOPPING BAG 06</h2>
+            <h2>PLAIN SHOPPING BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Plain Shopping Bags/PS07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS07.png" alt="PLAIN SHOPPING BAG 07" />
-            <h2>PLAIN SHOPPING BAG 07</h2>
+            <h2>PLAIN SHOPPING BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Plain Shopping Bags/PS08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS08.png" alt="PLAIN SHOPPING BAG 08" />
-            <h2>PLAIN SHOPPING BAG 08</h2>
+            <h2>PLAIN SHOPPING BAG-08</h2>
           </div>
         </a>
         <a href="../products-subcategory/Plain Shopping Bags/PS09.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PLAIN SHOPPING BAGS 4.5/PS09.png" alt="PLAIN SHOPPING BAG 09" />
-            <h2>PLAIN SHOPPING BAG 09</h2>
+            <h2>PLAIN SHOPPING BAG-09</h2>
           </div>
         </a>
       </section>
@@ -185,6 +185,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

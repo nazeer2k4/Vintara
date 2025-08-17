@@ -102,43 +102,43 @@
         <a href="../products-subcategory/Canvas Toiletry Bags/CT01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/CANVAS TOILETRY BAGS 4.5/CT01.png" alt="CANVAS TOILETRY BAG 01" />
-            <h2>CANVAS TOILETRY BAG 01</h2>
+            <h2>CANVAS TOILETRY BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Canvas Toiletry Bags/CT02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/CANVAS TOILETRY BAGS 4.5/CT02.png" alt="CANVAS TOILETRY BAG 02" />
-            <h2>CANVAS TOILETRY BAG 02</h2>
+            <h2>CANVAS TOILETRY BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Canvas Toiletry Bags/CT03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/CANVAS TOILETRY BAGS 4.5/CT03.png" alt="CANVAS TOILETRY BAG 03" />
-            <h2>CANVAS TOILETRY BAG 03</h2>
+            <h2>CANVAS TOILETRY BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Canvas Toiletry Bags/CT04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/CANVAS TOILETRY BAGS 4.5/CT04.png" alt="CANVAS TOILETRY BAG 04" />
-            <h2>CANVAS TOILETRY BAG 04</h2>
+            <h2>CANVAS TOILETRY BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Canvas Toiletry Bags/CT05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/CANVAS TOILETRY BAGS 4.5/CT05.png" alt="CANVAS TOILETRY BAG 05" />
-            <h2>CANVAS TOILETRY BAG 05</h2>
+            <h2>CANVAS TOILETRY BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Canvas Toiletry Bags/CT06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/CANVAS TOILETRY BAGS 4.5/CT06.png" alt="CANVAS TOILETRY BAG 06" />
-            <h2>CANVAS TOILETRY BAG 06</h2>
+            <h2>CANVAS TOILETRY BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Canvas Toiletry Bags/CT07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/CANVAS TOILETRY BAGS 4.5/CT07.png" alt="CANVAS TOILETRY BAG 07" />
-            <h2>CANVAS TOILETRY BAG 07</h2>
+            <h2>CANVAS TOILETRY BAG-07</h2>
           </div>
         </a>
       </section>
@@ -174,6 +174,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

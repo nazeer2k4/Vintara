@@ -102,25 +102,25 @@
         <a href="../products-subcategory/" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LAPTOP BAGS 4.5/JL01 (IMAGE 1).png" alt="JUTE LAPTOP BAG 01" />
-            <h2>JUTE LAPTOP BAG 01</h2>
+            <h2>JUTE LAPTOP BAG-01</h2>
           </div>
         </a>
         <a href="productpage/naturaljutebags.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LAPTOP BAGS 4.5/JL02 (IMAGE 1).png" alt="JUTE LAPTOP BAG 02" />
-            <h2>JUTE LAPTOP BAG 02</h2>
+            <h2>JUTE LAPTOP BAG-02</h2>
           </div>
         </a>
         <a href="productpage/naturaljutebags.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LAPTOP BAGS 4.5/JL03 (IMAGE 1).png" alt="JUTE LAPTOP BAG 03" />
-            <h2>JUTE LAPTOP BAG 03</h2>
+            <h2>JUTE LAPTOP BAG-03</h2>
           </div>
         </a>
         <a href="productpage/naturaljutebags.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LAPTOP BAGS 4.5/JL04.png" alt="JUTE LAPTOP BAG 04" />
-            <h2>JUTE LAPTOP BAG 04</h2>
+            <h2>JUTE LAPTOP BAG-04</h2>
           </div>
         </a>
       </section>
@@ -156,6 +156,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

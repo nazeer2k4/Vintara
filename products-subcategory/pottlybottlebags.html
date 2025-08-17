@@ -102,31 +102,31 @@
         <a href="../products-subcategory/Pottly Bottle Bags/PB01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/POTTLY BOTTLE BAGS 4.5/PB01 (IMAGE 1).png" alt="POTTLY BOTTLE BAG 01" />
-            <h2>POTTLY BOTTLE BAG 01</h2>
+            <h2>POTTLY BOTTLE BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Pottly Bottle Bags/PB02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/POTTLY BOTTLE BAGS 4.5/PB02.png" alt="POTTLY BOTTLE BAG 02" />
-            <h2>POTTLY BOTTLE BAG 02</h2>
+            <h2>POTTLY BOTTLE BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Pottly Bottle Bags/PB03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/POTTLY BOTTLE BAGS 4.5/PB03.png" alt="POTTLY BOTTLE BAG 03" />
-            <h2>POTTLY BOTTLE BAG 03</h2>
+            <h2>POTTLY BOTTLE BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Pottly Bottle Bags/PB04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/POTTLY BOTTLE BAGS 4.5/PB04.png" alt="POTTLY BOTTLE BAG 04" />
-            <h2>POTTLY BOTTLE BAG 04</h2>
+            <h2>POTTLY BOTTLE BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Pottly Bottle Bags/PB05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/POTTLY BOTTLE BAGS 4.5/PB05.png" alt="POTTLY BOTTLE BAG 05" />
-            <h2>POTTLY BOTTLE BAG 05</h2>
+            <h2>POTTLY BOTTLE BAG-05</h2>
           </div>
         </a>
       </section>
@@ -162,6 +162,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

@@ -102,61 +102,61 @@
         <a href="../products-subcategory/Jute Pouches/JP01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE POUCHES 4.5/JP01.png" alt="JUTE POUCHES 01" />
-            <h2>JUTE POUCHES 01</h2>
+            <h2>JUTE POUCHES-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Pouches/JP02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE POUCHES 4.5/JP02.png" alt="JUTE POUCHES 02" />
-            <h2>JUTE POUCHES 02</h2>
+            <h2>JUTE POUCHES-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Pouches/JP03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE POUCHES 4.5/JP03.png" alt="JUTE POUCHES 03" />
-            <h2>JUTE POUCHES 03</h2>
+            <h2>JUTE POUCHES-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Pouches/JP04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE POUCHES 4.5/JP04.png" alt="JUTE POUCHES 04" />
-            <h2>JUTE POUCHES 04</h2>
+            <h2>JUTE POUCHES-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Pouches/JP05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE POUCHES 4.5/JP05 (IMAGE 1).png" alt="JUTE POUCHES 05" />
-            <h2>JUTE POUCHES 05</h2>
+            <h2>JUTE POUCHES-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Pouches/JP06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE POUCHES 4.5/JP06 (IMAGE 1).png" alt="JUTE POUCHES 06" />
-            <h2>JUTE POUCHES 06</h2>
+            <h2>JUTE POUCHES-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Pouches/JP07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE POUCHES 4.5/JP07.png" alt="JUTE POUCHES 07" />
-            <h2>JUTE POUCHES 07</h2>
+            <h2>JUTE POUCHES-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Pouches/JP08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE POUCHES 4.5/JP08.png" alt="JUTE POUCHES 08" />
-            <h2>JUTE POUCHES 08</h2>
+            <h2>JUTE POUCHES-08</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Pouches/JP09.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE POUCHES 4.5/JP09 (IMAGE 1).png" alt="JUTE POUCHES 09" />
-            <h2>JUTE POUCHES 09</h2>
+            <h2>JUTE POUCHES-09</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Pouches/JP10.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE POUCHES 4.5/JP10 (IMAGE 1).png" alt="JUTE POUCHES 10" />
-            <h2>JUTE POUCHES 10</h2>
+            <h2>JUTE POUCHES-10</h2>
           </div>
         </a>
       </section>
@@ -192,6 +192,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

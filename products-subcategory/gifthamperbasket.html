@@ -102,49 +102,49 @@
         <a href="../products-subcategory/Gift Hamper Basket/GH01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/GIFT HAMPER BASKET 4.5/GH01.png" alt="GIFT HAMPER BASKET 01" />
-            <h2>GIFT HAMPER BASKET 01</h2>
+            <h2>GIFT HAMPER BASKET-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Gift Hamper Basket/GH02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/GIFT HAMPER BASKET 4.5/GH02.png" alt="GIFT HAMPER BASKET 02" />
-            <h2>GIFT HAMPER BASKET 02</h2>
+            <h2>GIFT HAMPER BASKET-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Gift Hamper Basket/GH03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/GIFT HAMPER BASKET 4.5/GH03.png" alt="GIFT HAMPER BASKET 03" />
-            <h2>GIFT HAMPER BASKET 03</h2>
+            <h2>GIFT HAMPER BASKET-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Gift Hamper Basket/GH04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/GIFT HAMPER BASKET 4.5/GH04.png" alt="GIFT HAMPER BASKET 04" />
-            <h2>GIFT HAMPER BASKET 04</h2>
+            <h2>GIFT HAMPER BASKET-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Gift Hamper Basket/GH05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/GIFT HAMPER BASKET 4.5/GH05.png" alt="GIFT HAMPER BASKET 05" />
-            <h2>GIFT HAMPER BASKET 05</h2>
+            <h2>GIFT HAMPER BASKET-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Gift Hamper Basket/GH06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/GIFT HAMPER BASKET 4.5/GH06.png" alt="GIFT HAMPER BASKET 06" />
-            <h2>GIFT HAMPER BASKET 06</h2>
+            <h2>GIFT HAMPER BASKET-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Gift Hamper Basket/GH07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/GIFT HAMPER BASKET 4.5/GH07.png" alt="GIFT HAMPER BASKET 07" />
-            <h2>GIFT HAMPER BASKET 07</h2>
+            <h2>GIFT HAMPER BASKET-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Gift Hamper Basket/GH08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/GIFT HAMPER BASKET 4.5/GH08.png" alt="GIFT HAMPER BASKET 08" />
-            <h2>GIFT HAMPER BASKET 08</h2>
+            <h2>GIFT HAMPER BASKET-08</h2>
           </div>
         </a>
       </section>
@@ -180,6 +180,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

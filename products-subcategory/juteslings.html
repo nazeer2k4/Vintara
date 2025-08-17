@@ -101,49 +101,49 @@
         <a href="../products-subcategory/Jute Sling Bags/JS01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE SLING BAGS 4.5/JS01 (IMAGE 1).png" alt="JUTE SLING BAG 01" />
-            <h2>JUTE SLING BAG 01</h2>
+            <h2>JUTE SLING BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Sling Bags/JS02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE SLING BAGS 4.5/JS02.png" alt="JUTE SLING BAG 02" />
-            <h2>JUTE SLING BAG 02</h2>
+            <h2>JUTE SLING BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Sling Bags/JS03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE SLING BAGS 4.5/JS03.png" alt="JUTE SLING BAG 03" />
-            <h2>JUTE SLING BAG 03</h2>
+            <h2>JUTE SLING BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Sling Bags/JS04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE SLING BAGS 4.5/JS04.png" alt="JUTE SLING BAG 04" />
-            <h2>JUTE SLING BAG 04</h2>
+            <h2>JUTE SLING BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Sling Bags/JS05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE SLING BAGS 4.5/JS05.png" alt="JUTE SLING BAG 05" />
-            <h2>JUTE SLING BAG 05</h2>
+            <h2>JUTE SLING BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Sling Bags/JS06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE SLING BAGS 4.5/JS06.png" alt="JUTE SLING BAG 06" />
-            <h2>JUTE SLING BAG 06</h2>
+            <h2>JUTE SLING BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Sling Bags/JS07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE SLING BAGS 4.5/JS07.png" alt="JUTE SLING BAG 07" />
-            <h2>JUTE SLING BAG 07</h2>
+            <h2>JUTE SLING BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Sling Bags/JS08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE SLING BAGS 4.5/JS08.png" alt="JUTE SLING BAG 08" />
-            <h2>JUTE SLING BAG 08</h2>
+            <h2>JUTE SLING BAG-08</h2>
           </div>
         </a>
       </section>
@@ -179,6 +179,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

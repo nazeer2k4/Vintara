@@ -102,61 +102,61 @@
         <a href="../products-subcategory/Fancy Tote Bags/FT01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/FANCY TOTE BAGS 4.5/FT01.png" alt="FANCY TOTE BAG 01" />
-            <h2>FANCY TOTE BAG 01</h2>
+            <h2>FANCY TOTE BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Fancy Tote Bags/FT02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/FANCY TOTE BAGS 4.5/FT02.png" alt="FANCY TOTE BAG 02" />
-            <h2>FANCY TOTE BAG 02</h2>
+            <h2>FANCY TOTE BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Fancy Tote Bags/FT03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/FANCY TOTE BAGS 4.5/FT03 (IMAGE 1).png" alt="FANCY TOTE BAG 03" />
-            <h2>FANCY TOTE BAG 03</h2>
+            <h2>FANCY TOTE BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Fancy Tote Bags/FT04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/FANCY TOTE BAGS 4.5/FT04 (IMAGE 1).png" alt="FANCY TOTE BAG 04" />
-            <h2>FANCY TOTE BAG 04</h2>
+            <h2>FANCY TOTE BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Fancy Tote Bags/FT05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/FANCY TOTE BAGS 4.5/FT05.png" alt="FANCY TOTE BAG 05" />
-            <h2>FANCY TOTE BAG 05</h2>
+            <h2>FANCY TOTE BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Fancy Tote Bags/FT06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/FANCY TOTE BAGS 4.5/FT06 (IMAGE 1).png" alt="FANCY TOTE BAG 06" />
-            <h2>FANCY TOTE BAG 06</h2>
+            <h2>FANCY TOTE BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Fancy Tote Bags/FT07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/FANCY TOTE BAGS 4.5/FT07.png" alt="FANCY TOTE BAG 07" />
-            <h2>FANCY TOTE BAG 07</h2>
+            <h2>FANCY TOTE BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Fancy Tote Bags/FT08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/FANCY TOTE BAGS 4.5/FT08 (IMAGE 1).png" alt="FANCY TOTE BAG 08" />
-            <h2>FANCY TOTE BAG 08</h2>
+            <h2>FANCY TOTE BAG-08</h2>
           </div>
         </a>
         <a href="../products-subcategory/Fancy Tote Bags/FT09.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/FANCY TOTE BAGS 4.5/FT09 (IMAGE 1).png" alt="FANCY TOTE BAG 09" />
-            <h2>FANCY TOTE BAG 09</h2>
+            <h2>FANCY TOTE BAG-09</h2>
           </div>
         </a>
         <a href="../products-subcategory/Fancy Tote Bags/FT10.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/FANCY TOTE BAGS 4.5/FT10 (IMAGE 1).png" alt="FANCY TOTE BAG 10" />
-            <h2>FANCY TOTE BAG 10</h2>
+            <h2>FANCY TOTE BAG-10</h2>
           </div>
         </a>
       </section>
@@ -192,6 +192,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

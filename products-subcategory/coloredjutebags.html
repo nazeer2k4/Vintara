@@ -101,7 +101,7 @@
         <a href="../products-subcategory/Coloured Jute Bags/CJ01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/COLORED JUTE BAGS 4.5/CJ01 (IMAGE 1).png" alt="COLORED JUTE BAGS CJ01" />
-            <h2>COLORED JUTE BAG CJ01</h2>
+            <h2>COLORED JUTE BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Coloured Jute Bags/CJ02.html" class="product-link">
@@ -110,7 +110,7 @@
               src="../images/OUR PRODUCTS/COLORED JUTE BAGS 4.5/CJ02 (IMAGE 1).png"
               alt="COLORED JUTE BAGS CJ02"
             />
-            <h2>COLORED JUTE BAG CJ02</h2>
+            <h2>COLORED JUTE BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Coloured Jute Bags/CJ03.html" class="product-link">
@@ -119,7 +119,7 @@
               src="../images/OUR PRODUCTS/COLORED JUTE BAGS 4.5/CJ03 (IMAGE 1).png"
               alt="COLORED JUTE BAGS CJ03"
             />
-            <h2>COLORED JUTE BAG CJ03</h2>
+            <h2>COLORED JUTE BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Coloured Jute Bags/CJ04.html" class="product-link">
@@ -128,7 +128,7 @@
               src="../images/OUR PRODUCTS/COLORED JUTE BAGS 4.5/CJ04 (IMAGE 1).png"
               alt="COLORED JUTE BAGS CJ04"
             />
-            <h2>COLORED JUTE BAG CJ04</h2>
+            <h2>COLORED JUTE BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Coloured Jute Bags/CJ05.html" class="product-link">
@@ -137,7 +137,7 @@
               src="../images/OUR PRODUCTS/COLORED JUTE BAGS 4.5/CJ05 (IMAGE 1).png"
               alt="COLORED JUTE BAGS CJO5"
             />
-            <h2>COLORED JUTE BAG CJ05</h2>
+            <h2>COLORED JUTE BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Coloured Jute Bags/CJ06.html" class="product-link">
@@ -146,7 +146,7 @@
               src="../images/OUR PRODUCTS/COLORED JUTE BAGS 4.5/CJ06 (IMAGE 1).png"
               alt="COLORED JUTE BAGS CJO6"
             />
-            <h2>COLORED JUTE BAG CJ06</h2>
+            <h2>COLORED JUTE BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Coloured Jute Bags/CJ07.html" class="product-link">
@@ -155,7 +155,7 @@
               src="../images/OUR PRODUCTS/COLORED JUTE BAGS 4.5/CJ07.png"
               alt="COLORED BAGS CJ07"
             />
-            <h2>COLORED JUTE BAG CJ07</h2>
+            <h2>COLORED JUTE BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Coloured Jute Bags/CJ08.html" class="product-link">
@@ -164,7 +164,7 @@
               src="../images/OUR PRODUCTS/COLORED JUTE BAGS 4.5/CJ08 (IMAGE 1).png"
               alt="COLORED BAGS CJ08"
             />
-            <h2>COLORED JUTE BAG CJ08</h2>
+            <h2>COLORED JUTE BAG-08</h2>
           </div>
         </a>
       </section>
@@ -200,6 +200,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

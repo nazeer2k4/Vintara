@@ -102,7 +102,7 @@
         <a href="../products-subcategory/Promotional Tote Bags/PT01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PROMOTIONAL TOTE BAGS 4.5/PT01.png" alt="PROMOTIONAL TOTE BAGS PT01" />
-            <h2>PROMOTIONAL TOTE BAG PT01</h2>
+            <h2>PROMOTIONAL TOTE BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Promotional Tote Bags/PT02.html" class="product-link">
@@ -111,7 +111,7 @@
               src="../images/OUR PRODUCTS/PROMOTIONAL TOTE BAGS 4.5/PT02.png"
               alt="PROMOTIONAL TOTE BAGS PT02"
             />
-            <h2>PROMOTIONAL TOTE BAG PT02</h2>
+            <h2>PROMOTIONAL TOTE BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Promotional Tote Bags/PT03.html" class="product-link">
@@ -120,7 +120,7 @@
               src="../images/OUR PRODUCTS/PROMOTIONAL TOTE BAGS 4.5/PT03.png"
               alt="PROMOTIONAL TOTE BAGS PT03"
             />
-            <h2>PROMOTIONAL TOTE BAG PT03</h2>
+            <h2>PROMOTIONAL TOTE BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Promotional Tote Bags/PT04.html" class="product-link">
@@ -129,7 +129,7 @@
               src="../images/OUR PRODUCTS/PROMOTIONAL TOTE BAGS 4.5/PT04.png"
               alt="PROMOTIONAL TOTE BAGS PT04"
             />
-            <h2>PROMOTIONAL TOTE BAG PT04</h2>
+            <h2>PROMOTIONAL TOTE BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Promotional Tote Bags/PT05.html" class="product-link">
@@ -138,7 +138,7 @@
               src="../images/OUR PRODUCTS/PROMOTIONAL TOTE BAGS 4.5/PT05.png"
               alt="PROMOTIONAL TOTE BAGS PT05"
             />
-            <h2>PROMOTIONAL TOTE BAGS PT05</h2>
+            <h2>PROMOTIONAL TOTE BAGS-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Promotional Tote Bags/PT06.html" class="product-link">
@@ -147,7 +147,7 @@
               src="../images/OUR PRODUCTS/PROMOTIONAL TOTE BAGS 4.5/PT06.png"
               alt="PROMOTIONAL TOTE BAGS PTO6"
             />
-            <h2>PROMOTIONAL TOTE BAGS PT06</h2>
+            <h2>PROMOTIONAL TOTE BAGS-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Promotional Tote Bags/PT07.html" class="product-link">
@@ -156,7 +156,7 @@
               src="../images/OUR PRODUCTS/PROMOTIONAL TOTE BAGS 4.5/PT07.png"
               alt="PROMOTIONAL TOTE BAGS PT07"
             />
-            <h2>PROMOTIONAL TOTE BAG CJ07</h2>
+            <h2>PROMOTIONAL TOTE BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Promotional Tote Bags/PT08.html" class="product-link">
@@ -165,7 +165,7 @@
               src="../images/OUR PRODUCTS/PROMOTIONAL TOTE BAGS 4.5/PT08 (IMAGE 1).png"
               alt="PROMOTIONAL TOTE BAGS PT08"
             />
-            <h2>PROMOTIONAL TOTE BAG PT08</h2>
+            <h2>PROMOTIONAL TOTE BAG-08</h2>
           </div>
         </a>
         <a href="../products-subcategory/Promotional Tote Bags/PT09.html" class="product-link">
@@ -174,7 +174,7 @@
               src="../images/OUR PRODUCTS/PROMOTIONAL TOTE BAGS 4.5/PT09 (IMAGE 1).png"
               alt="PROMOTIONAL TOTE BAGS PT09"
             />
-            <h2>PROMOTIONAL TOTE BAG PT09</h2>
+            <h2>PROMOTIONAL TOTE BAG-09</h2>
           </div>
         </a>
         <a href="../products-subcategory/Promotional Tote Bags/PT10.html" class="product-link">
@@ -183,7 +183,7 @@
               src="../images/OUR PRODUCTS/PROMOTIONAL TOTE BAGS 4.5/PT10.png"
               alt="PROMOTIONAL TOTE BAGS PT10"
             />
-            <h2>PROMOTIONAL TOTE BAG PT10</h2>
+            <h2>PROMOTIONAL TOTE BAG-10</h2>
           </div>
         </a>
       </section>
@@ -219,6 +219,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

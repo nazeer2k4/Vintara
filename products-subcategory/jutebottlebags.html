@@ -97,43 +97,43 @@
         <a href="../products-subcategory/Jute Bottle Bags/JB01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE BOTTLE BAGS 4.5/JB01.png" alt="JUTE BOTTLE BAG 01" />
-            <h2>JUTE BOTTLE BAG 01</h2>
+            <h2>JUTE BOTTLE BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Bottle Bags/JB02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE BOTTLE BAGS 4.5/JB02.png" alt="JUTE BOTTLE BAG 02" />
-            <h2>JUTE BOTTLE BAG 02</h2>
+            <h2>JUTE BOTTLE BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Bottle Bags/JB03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE BOTTLE BAGS 4.5/JB03.png" alt="JUTE BOTTLE BAG 03" />
-            <h2>JUTE BOTTLE BAG 03</h2>
+            <h2>JUTE BOTTLE BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Bottle Bags/JB04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE BOTTLE BAGS 4.5/JB04.png" alt="JUTE BOTTLE BAG 04" />
-            <h2>JUTE BOTTLE BAG 04</h2>
+            <h2>JUTE BOTTLE BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Bottle Bags/JB05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE BOTTLE BAGS 4.5/JB05.png" alt="JUTE BOTTLE BAG 05" />
-            <h2>JUTE BOTTLE BAG 05</h2>
+            <h2>JUTE BOTTLE BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Bottle Bags/JB06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE BOTTLE BAGS 4.5/JB06.png" alt="JUTE BOTTLE BAG 06" />
-            <h2>JUTE BOTTLE BAG 06</h2>
+            <h2>JUTE BOTTLE BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Bottle Bags/JB07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE BOTTLE BAGS 4.5/JB07.png" alt="JUTE BOTTLE BAG 07" />
-            <h2>JUTE BOTTLE BAG 07</h2>
+            <h2>JUTE BOTTLE BAG-07</h2>
           </div>
         </a>
       </section>
@@ -169,6 +169,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

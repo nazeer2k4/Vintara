@@ -101,49 +101,49 @@
         <a href="../products-subcategory/Jute Lunch Bags/LU01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LUNCH BAGS 4.5/LU01 (IMAGE 1).png" alt="JUTE LUNCH BAGS 01" />
-            <h2>JUTE LUNCH BAG 01</h2>
+            <h2>JUTE LUNCH BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Lunch Bags/LU02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LUNCH BAGS 4.5/LU02 (IMAGE 1).png" alt="JUTE LUNCH BAGS 02" />
-            <h2>JUTE LUNCH BAG 02</h2>
+            <h2>JUTE LUNCH BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Lunch Bags/LU03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LUNCH BAGS 4.5/LU03 (IMAGE 1).png" alt="JUTE LUNCH BAGS 03" />
-            <h2>JUTE LUNCH BAG 03</h2>
+            <h2>JUTE LUNCH BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Lunch Bags/LU04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LUNCH BAGS 4.5/LU04 (IMAGE 1).png" alt="JUTE LUNCH BAGS 04" />
-            <h2>JUTE LUNCH BAG 04</h2>
+            <h2>JUTE LUNCH BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Lunch Bags/LU05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LUNCH BAGS 4.5/LU05.png" alt="JUTE LUNCH BAGS 05" />
-            <h2>JUTE LUNCH BAG 05</h2>
+            <h2>JUTE LUNCH BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Lunch Bags/LU06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LUNCH BAGS 4.5/LU06 (IMAGE 1).png" alt="JUTE LUNCH BAGS 06" />
-            <h2>JUTE LUNCH BAG 06</h2>
+            <h2>JUTE LUNCH BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Lunch Bags/LU07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LUNCH BAGS 4.5/LU07 (IMAGE 1).png" alt="JUTE LUNCH BAGS 07" />
-            <h2>JUTE LUNCH BAG 07</h2>
+            <h2>JUTE LUNCH BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Lunch Bags/LU08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE LUNCH BAGS 4.5/LU08 (IMAGE 1).png" alt="JUTE LUNCH BAGS 08" />
-            <h2>JUTE LUNCH BAG 08</h2>
+            <h2>JUTE LUNCH BAG-08</h2>
           </div>
         </a>
       </section>
@@ -179,6 +179,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

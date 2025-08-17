@@ -101,49 +101,49 @@
         <a href="../products-subcategory/Printed Shopping Bags/PR01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PRINTED SHOPPING BAGS 4.5/PR01.png" alt="PRINTED SHOPPING BAG 01" />
-            <h2>PRINTED SHOPPING BAG 01</h2>
+            <h2>PRINTED SHOPPING BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Printed Shopping Bags/PR02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PRINTED SHOPPING BAGS 4.5/PR02.png" alt="PRINTED SHOPPING BAG 02" />
-            <h2>PRINTED SHOPPING BAG 02</h2>
+            <h2>PRINTED SHOPPING BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Printed Shopping Bags/PR03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PRINTED SHOPPING BAGS 4.5/PR03.png" alt="PRINTED SHOPPING BAG 03" />
-            <h2>PRINTED SHOPPING BAG 03</h2>
+            <h2>PRINTED SHOPPING BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Printed Shopping Bags/PR04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PRINTED SHOPPING BAGS 4.5/PR04.png" alt="PRINTED SHOPPING BAG 04" />
-            <h2>PRINTED SHOPPING BAG 04</h2>
+            <h2>PRINTED SHOPPING BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Printed Shopping Bags/PR05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PRINTED SHOPPING BAGS 4.5/PR05.png" alt="PRINTED SHOPPING BAG 05" />
-            <h2>PRINTED SHOPPING BAG 05</h2>
+            <h2>PRINTED SHOPPING BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Printed Shopping Bags/PR06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PRINTED SHOPPING BAGS 4.5/PR06.png" alt="PRINTED SHOPPING BAG 06" />
-            <h2>PRINTED SHOPPING BAG 06</h2>
+            <h2>PRINTED SHOPPING BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Printed Shopping Bags/PR07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PRINTED SHOPPING BAGS 4.5/PR07.png" alt="PRINTED SHOPPING BAG 07" />
-            <h2>PRINTED SHOPPING BAG 07</h2>
+            <h2>PRINTED SHOPPING BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Printed Shopping Bags/PR08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/PRINTED SHOPPING BAGS 4.5/PR08.png" alt="PRINTED SHOPPING BAG 08" />
-            <h2>PRINTED SHOPPING BAG 08</h2>
+            <h2>PRINTED SHOPPING BAG-08</h2>
           </div>
         </a>
       </section>
@@ -179,6 +179,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

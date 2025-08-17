@@ -102,49 +102,49 @@
         <a href="../products-subcategory/Jute Toiletry Bags/JT01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE TOILETRY BAGS 4.5/JT01.png" alt="JUTE TOILETRY BAG 01" />
-            <h2>JUTE TOILETRY BAG 01</h2>
+            <h2>JUTE TOILETRY BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Toiletry Bags/JT02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE TOILETRY BAGS 4.5/JT02.png" alt="JUTE TOILETRY BAG 02" />
-            <h2>JUTE TOILETRY BAG 02</h2>
+            <h2>JUTE TOILETRY BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Toiletry Bags/JT03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE TOILETRY BAGS 4.5/JT03.png" alt="JUTE TOILETRY BAG 03" />
-            <h2>JUTE TOILETRY BAG 03</h2>
+            <h2>JUTE TOILETRY BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Toiletry Bags/JT04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE TOILETRY BAGS 4.5/JT04.png" alt="JUTE TOILETRY BAG 04" />
-            <h2>JUTE TOILETRY BAG 04</h2>
+            <h2>JUTE TOILETRY BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Toiletry Bags/JT05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE TOILETRY BAGS 4.5/JT05.png" alt="JUTE TOILETRY BAG 05" />
-            <h2>JUTE TOILETRY BAG 05</h2>
+            <h2>JUTE TOILETRY BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Toiletry Bags/JT06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE TOILETRY BAGS 4.5/JT06.png" alt="JUTE TOILETRY BAG 06" />
-            <h2>JUTE TOILETRY BAG 06</h2>
+            <h2>JUTE TOILETRY BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Toiletry Bags/JT07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE TOILETRY BAGS 4.5/JT07.png" alt="JUTE TOILETRY BAG 07" />
-            <h2>JUTE TOILETRY BAG 07</h2>
+            <h2>JUTE TOILETRY BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Toiletry Bags/JT08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE TOILETRY BAGS 4.5/JT08.png" alt="JUTE TOILETRY BAG 08" />
-            <h2>JUTE TOILETRY BAG 08</h2>
+            <h2>JUTE TOILETRY BAG-08</h2>
           </div>
         </a>
       </section>
@@ -180,6 +180,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

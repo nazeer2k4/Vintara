@@ -102,85 +102,85 @@
         <a href="../products-subcategory/Beach Bags/BE01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE01.png" alt="BEACH BAG 01" />
-            <h2>BEACH BAG 01</h2>
+            <h2>BEACH BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE02.png" alt="BEACH BAG 02" />
-            <h2>BEACH BAG 02</h2>
+            <h2>BEACH BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE03.png" alt="BEACH BAG 03" />
-            <h2>BEACH BAG 03</h2>
+            <h2>BEACH BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE04.png" alt="BEACH BAG 04" />
-            <h2>BEACH BAG 04</h2>
+            <h2>BEACH BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE05.png" alt="BEACH BAG 05" />
-            <h2>BEACH BAG 05</h2>
+            <h2>BEACH BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE06.png" alt="BEACH BAG 06" />
-            <h2>BEACH BAG 06</h2>
+            <h2>BEACH BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE07.png" alt="BEACH BAG 07" />
-            <h2>BEACH BAG 07</h2>
+            <h2>BEACH BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE08.png" alt="BEACH BAG 08" />
-            <h2>BEACH BAG 08</h2>
+            <h2>BEACH BAG-08</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE09.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE09.png" alt="BEACH BAG 09" />
-            <h2>BEACH BAG 09</h2>
+            <h2>BEACH BAG-09</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE10.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE10.png" alt="BEACH BAG 10" />
-            <h2>BEACH BAG 10</h2>
+            <h2>BEACH BAG-10</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE11.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE11.png" alt="BEACH BAG 11" />
-            <h2>BEACH BAG 11</h2>
+            <h2>BEACH BAG-11</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE12.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE12.png" alt="BEACH BAG 12" />
-            <h2>BEACH BAG 12</h2>
+            <h2>BEACH BAG-12</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE13.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE13.png" alt="BEACH BAG 13" />
-            <h2>BEACH BAG 13</h2>
+            <h2>BEACH BAG-13</h2>
           </div>
         </a>
         <a href="../products-subcategory/Beach Bags/BE14.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/BEACH BAGS 4.5/BE14.png" alt="BEACH BAG 14" />
-            <h2>BEACH BAG 14</h2>
+            <h2>BEACH BAG-14</h2>
           </div>
         </a>
       </section>
@@ -216,6 +216,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+   document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

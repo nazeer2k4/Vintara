@@ -102,61 +102,61 @@
         <a href="../products-subcategory/Jute Fancy Hand Bags/FH01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FANCY HAND BAGS 4.5/FH01.png" alt="JUTE FANCY HAND BAG 01" />
-            <h2>JUTE FANCY HAND BAG 01</h2>
+            <h2>JUTE FANCY HAND BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Fancy Hand Bags/FH02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FANCY HAND BAGS 4.5/FH02.png" alt="JUTE FANCY HAND BAG 02" />
-            <h2>JUTE FANCY HAND BAG 02</h2>
+            <h2>JUTE FANCY HAND BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Fancy Hand Bags/FH03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FANCY HAND BAGS 4.5/FH03.png" alt="JUTE FANCY HAND BAG 03" />
-            <h2>JUTE FANCY HAND BAG 03</h2>
+            <h2>JUTE FANCY HAND BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Fancy Hand Bags/FH04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FANCY HAND BAGS 4.5/FH04.png" alt="JUTE FANCY HAND BAG 04" />
-            <h2>JUTE FANCY HAND BAG 04</h2>
+            <h2>JUTE FANCY HAND BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Fancy Hand Bags/FH05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FANCY HAND BAGS 4.5/FH05.png" alt="JUTE FANCY HAND BAG 05" />
-            <h2>JUTE FANCY HAND BAG 05</h2>
+            <h2>JUTE FANCY HAND BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Fancy Hand Bags/FH06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FANCY HAND BAGS 4.5/FH06.png" alt="JUTE FANCY HAND BAG 06" />
-            <h2>JUTE FANCY HAND BAG 06</h2>
+            <h2>JUTE FANCY HAND BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Fancy Hand Bags/FH07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FANCY HAND BAGS 4.5/FH07.png" alt="JUTE FANCY HAND BAG 07" />
-            <h2>JUTE FANCY HAND BAG 07</h2>
+            <h2>JUTE FANCY HAND BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Fancy Hand Bags/FH08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FANCY HAND BAGS 4.5/FH08.png" alt="JUTE FANCY HAND BAG 08" />
-            <h2>JUTE FANCY HAND BAG 08</h2>
+            <h2>JUTE FANCY HAND BAG-08</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Fancy Hand Bags/FH09.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FANCY HAND BAGS 4.5/FH09.png" alt="JUTE FANCY HAND BAG 09" />
-            <h2>JUTE FANCY HAND BAG 09</h2>
+            <h2>JUTE FANCY HAND BAG-09</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Fancy Hand Bags/FH10.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FANCY HAND BAGS 4.5/FH10.png" alt="JUTE FANCY HAND BAG 10" />
-            <h2>JUTE FANCY HAND BAG 10</h2>
+            <h2>JUTE FANCY HAND BAG-10</h2>
           </div>
         </a>
       </section>
@@ -192,6 +192,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

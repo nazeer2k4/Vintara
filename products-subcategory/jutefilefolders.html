@@ -101,43 +101,43 @@
         <a href="../products-subcategory/Jute File Folders/JF01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FILE FOLDERS 4.5/JF01.png" alt="JUTE FILE FOLDERS 01" />
-            <h2>JUTE FILE FOLDERS 01</h2>
+            <h2>JUTE FILE FOLDERS-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute File Folders/JF02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FILE FOLDERS 4.5/JF02 (IMAGE 1).png" alt="JUTE FILE FOLDERS 02" />
-            <h2>JUTE FILE FOLDERS 02</h2>
+            <h2>JUTE FILE FOLDERS-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute File Folders/JF03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FILE FOLDERS 4.5/JF03.png" alt="JUTE FILE FOLDERS 03" />
-            <h2>JUTE FILE FOLDERS 03</h2>
+            <h2>JUTE FILE FOLDERS-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute File Folders/JF04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FILE FOLDERS 4.5/JF04 (IMAGE 1).png" alt="JUTE FILE FOLDERS 04" />
-            <h2>JUTE FILE FOLDERS 04</h2>
+            <h2>JUTE FILE FOLDERS-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute File Folders/JF05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FILE FOLDERS 4.5/JF05.png" alt="JUTE FILE FOLDERS 05" />
-            <h2>JUTE FILE FOLDERS 05</h2>
+            <h2>JUTE FILE FOLDERS-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute File Folders/JF06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FILE FOLDERS 4.5/JF06 (IMAGE 1).png" alt="JUTE FILE FOLDERS 06" />
-            <h2>JUTE FILE FOLDERS 06</h2>
+            <h2>JUTE FILE FOLDERS-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute File Folders/JF07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE FILE FOLDERS 4.5/JF07.png" alt="JUTE FILE FOLDERS 07" />
-            <h2>JUTE FILE FOLDERS 07</h2>
+            <h2>JUTE FILE FOLDERS-07</h2>
           </div>
         </a>
       </section>
@@ -173,6 +173,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

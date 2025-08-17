@@ -102,55 +102,55 @@
         <a href="../products-subcategory/Laundry Bags/LB01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/LAUNDRY BAGS 4.5/LB01.png" alt="LAUNDRY BAGS 01" />
-            <h2>LAUNDRY BAG 01</h2>
+            <h2>LAUNDRY BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Laundry Bags/LB02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/LAUNDRY BAGS 4.5/LB02.png" alt="LAUNDRY BAGS 02" />
-            <h2>LAUNDRY BAG 02</h2>
+            <h2>LAUNDRY BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Laundry Bags/LB03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/LAUNDRY BAGS 4.5/LB03.png" alt="LAUNDRY BAGS 03" />
-            <h2>LAUNDRY BAG 03</h2>
+            <h2>LAUNDRY BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Laundry Bags/LB04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/LAUNDRY BAGS 4.5/LB04 (IMAGE 1).png" alt="LAUNDRY BAGS 04" />
-            <h2>LAUNDRY BAG 04</h2>
+            <h2>LAUNDRY BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Laundry Bags/LB05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/LAUNDRY BAGS 4.5/LB05.png" alt="LAUNDRY BAGS 05" />
-            <h2>LAUNDRY BAG 05</h2>
+            <h2>LAUNDRY BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Laundry Bags/LB06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/LAUNDRY BAGS 4.5/LB06.png" alt="LAUNDRY BAGS 06" />
-            <h2>LAUNDRY BAG 06</h2>
+            <h2>LAUNDRY BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Laundry Bags/LB07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/LAUNDRY BAGS 4.5/LB07 (IMAGE 1).png" alt="LAUNDRY BAGS 07" />
-            <h2>LAUNDRY BAG 07</h2>
+            <h2>LAUNDRY BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Laundry Bags/LB08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/LAUNDRY BAGS 4.5/LB08 (IMAGE 1).png" alt="LAUNDRY BAGS 08" />
-            <h2>LAUNDRY BAG 08</h2>
+            <h2>LAUNDRY BAG-08</h2>
           </div>
         </a>
         <a href="../products-subcategory/Laundry Bags/LB09.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/LAUNDRY BAGS 4.5/LB09 (IMAGE 1).png" alt="LAUNDRY BAGS 09" />
-            <h2>LAUNDRY BAG 09</h2>
+            <h2>LAUNDRY BAG-09</h2>
           </div>
         </a>
       </section>
@@ -186,6 +186,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

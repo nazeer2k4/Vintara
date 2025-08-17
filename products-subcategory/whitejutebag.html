@@ -102,7 +102,7 @@
         <a href="../products-subcategory/White Jute Bags/WJ01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/WHITE JUTE BAG 4.5/WJ01 (IMAGE 1).png" alt="WHITE JUTE BAGS 01" />
-            <h2>WHITE JUTE BAG 01</h2>
+            <h2>WHITE JUTE BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/White Jute Bags/WJ02.html" class="product-link">
@@ -111,7 +111,7 @@
               src="../images/OUR PRODUCTS/WHITE JUTE BAG 4.5/WJ02.png"
               alt="WHITE JUTE BAGS 02"
             />
-            <h2>WHITE JUTE BAG 02</h2>
+            <h2>WHITE JUTE BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/White Jute Bags/WJ03.html" class="product-link">
@@ -120,7 +120,7 @@
               src="../images/OUR PRODUCTS/WHITE JUTE BAG 4.5/WJ03.png"
               alt="WHITE JUTE BAGS 03"
             />
-            <h2>WHITE JUTE BAG 03</h2>
+            <h2>WHITE JUTE BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/White Jute Bags/WJ04.html" class="product-link">
@@ -129,7 +129,7 @@
               src="../images/OUR PRODUCTS/WHITE JUTE BAG 4.5/WJ04.png"
               alt="WHITE JUTE BAGS 04"
             />
-            <h2>WHITE JUTE BAG 04</h2>
+            <h2>WHITE JUTE BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/White Jute Bags/WJ05.html" class="product-link">
@@ -138,7 +138,7 @@
               src="../images/OUR PRODUCTS/WHITE JUTE BAG 4.5/WJ05.png"
               alt="WHITE JUTE BAGS 05"
             />
-            <h2>WHITE JUTE BAG 05</h2>
+            <h2>WHITE JUTE BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/White Jute Bags/WJ06.html" class="product-link">
@@ -147,7 +147,7 @@
               src="../images/OUR PRODUCTS/WHITE JUTE BAG 4.5/WJ06.png"
               alt="WHITE JUTE BAGS"
             />
-            <h2>WHITE JUTE BAG 06</h2>
+            <h2>WHITE JUTE BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/White Jute Bags/WJ07.html" class="product-link">
@@ -156,7 +156,7 @@
               src="../images/OUR PRODUCTS/WHITE JUTE BAG 4.5/WJ07.png"
               alt="WHITE JUTE BAGS 07"
             />
-            <h2>WHITE JUTE BAG 07</h2>
+            <h2>WHITE JUTE BAG-07</h2>
           </div>
         </a>
       </section>
@@ -192,6 +192,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

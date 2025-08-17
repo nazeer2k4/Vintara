@@ -102,55 +102,55 @@
         <a href="../products-subcategory/Wall Hanging Bags/WH01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/WALL HANGING BAGS 4.5/WH01.png" alt="WALL HANGING BAGS WH01" />
-            <h2>WALL HANGING BAGS 01</h2>
+            <h2>WALL HANGING BAGS-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Wall Hanging Bags/WH02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/WALL HANGING BAGS 4.5/WH02.png" alt="WALL HANGING BAGS WH02" />
-            <h2>WALL HANGING BAGS 02</h2>
+            <h2>WALL HANGING BAGS-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Wall Hanging Bags/WH03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/WALL HANGING BAGS 4.5/WH03.png" alt="WALL HANGING BAGS WH03" />
-            <h2>WALL HANGING BAGS 03</h2>
+            <h2>WALL HANGING BAGS-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Wall Hanging Bags/WH04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/WALL HANGING BAGS 4.5/WH04.png" alt="WALL HANGING BAGS WH04" />
-            <h2>WALL HANGING BAGS 04</h2>
+            <h2>WALL HANGING BAGS-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Wall Hanging Bags/WH05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/WALL HANGING BAGS 4.5/WH05.png" alt="WALL HANGING BAGS WH05" />
-            <h2>WALL HANGING BAGS 05</h2>
+            <h2>WALL HANGING BAGS-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Wall Hanging Bags/WH06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/WALL HANGING BAGS 4.5/WH06.png" alt="WALL HANGING BAGS WH06" />
-            <h2>WALL HANGING BAGS 06</h2>
+            <h2>WALL HANGING BAGS-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Wall Hanging Bags/WH07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/WALL HANGING BAGS 4.5/WH07.png" alt="WALL HANGING BAGS WH07" />
-            <h2>WALL HANGING BAGS 07</h2>
+            <h2>WALL HANGING BAGS-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Wall Hanging Bags/WH08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/WALL HANGING BAGS 4.5/WH08.png" alt="WALL HANGING BAGS WH08" />
-            <h2>WALL HANGING BAGS 08</h2>
+            <h2>WALL HANGING BAGS-08</h2>
           </div>
         </a>
         <a href="../products-subcategory/Wall Hanging Bags/WH09.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/WALL HANGING BAGS 4.5/WH09.png" alt="WALL HANGING BAGS WH09" />
-            <h2>WALL HANGING BAGS 09</h2>
+            <h2>WALL HANGING BAGS-09</h2>
           </div>
         </a>
       </section>
@@ -186,6 +186,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

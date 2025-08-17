@@ -101,43 +101,43 @@
         <a href="../products-subcategory/Jute Jar Bags/JJ01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE JAR BAGS 4.5/JJ01.png" alt="JUTE JAR BAG 01" />
-            <h2>JUTE JAR BAG 01</h2>
+            <h2>JUTE JAR BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Jar Bags/JJ02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE JAR BAGS 4.5/JJ02.png" alt="JUTE JAR BAG 02" />
-            <h2>JUTE JAR BAG 02</h2>
+            <h2>JUTE JAR BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Jar Bags/JJ03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE JAR BAGS 4.5/JJ03.png" alt="JUTE JAR BAG 03" />
-            <h2>JUTE JAR BAG 03</h2>
+            <h2>JUTE JAR BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Jar Bags/JJ04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE JAR BAGS 4.5/JJ04.png" alt="JUTE JAR BAG 04" />
-            <h2>JUTE JAR BAG 04</h2>
+            <h2>JUTE JAR BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Jar Bags/JJ05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE JAR BAGS 4.5/JJ05.png" alt="JUTE JAR BAG 05" />
-            <h2>JUTE JAR BAG 05</h2>
+            <h2>JUTE JAR BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Jar Bags/JJ06html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE JAR BAGS 4.5/JJ06.png" alt="JUTE JAR BAG 06" />
-            <h2>JUTE JAR BAG 06</h2>
+            <h2>JUTE JAR BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Jar Bags/JJ07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE JAR BAGS 4.5/JJ07.png" alt="JUTE JAR BAG 07" />
-            <h2>JUTE JAR BAG 07</h2>
+            <h2>JUTE JAR BAG-07</h2>
           </div>
         </a>
       </section>
@@ -173,6 +173,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

@@ -101,55 +101,55 @@
         <a href="../products-subcategory/Storage Basket/SB01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/STORAGE BASKET 4.5/SB01.png" alt="STORAGE BASKET 01" />
-            <h2>STORAGE BASKET 01</h2>
+            <h2>STORAGE BASKET-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Storage Basket/SB02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/STORAGE BASKET 4.5/SB02.png" alt="STORAGE BASKET 02" />
-            <h2>STORAGE BASKET 02</h2>
+            <h2>STORAGE BASKET-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Storage Basket/SB03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/STORAGE BASKET 4.5/SB03.png" alt="STORAGE BASKET 03" />
-            <h2>STORAGE BASKET 03</h2>
+            <h2>STORAGE BASKET-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Storage Basket/SB04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/STORAGE BASKET 4.5/SB04.png" alt="STORAGE BASKET 04" />
-            <h2>STORAGE BASKET 04</h2>
+            <h2>STORAGE BASKET-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Storage Basket/SB05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/STORAGE BASKET 4.5/SB05.png" alt="STORAGE BASKET 05" />
-            <h2>STORAGE BASKET 05</h2>
+            <h2>STORAGE BASKET-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Storage Basket/SB06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/STORAGE BASKET 4.5/SB06.png" alt="STORAGE BASKET 06" />
-            <h2>STORAGE BASKET 06</h2>
+            <h2>STORAGE BASKET-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Storage Basket/SB07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/STORAGE BASKET 4.5/SB07.png" alt="STORAGE BASKET 07" />
-            <h2>STORAGE BASKET 07</h2>
+            <h2>STORAGE BASKET-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Storage Basket/SB08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/STORAGE BASKET 4.5/SB08.png" alt="STORAGE BASKET 08" />
-            <h2>STORAGE BASKET 08</h2>
+            <h2>STORAGE BASKET-08</h2>
           </div>
         </a>
         <a href="../products-subcategory/Storage Basket/SB09.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/STORAGE BASKET 4.5/SB09.png" alt="STORAGE BASKET 09" />
-            <h2>STORAGE BASKET 09</h2>
+            <h2>STORAGE BASKET-09</h2>
           </div>
         </a>
       </section>
@@ -185,6 +185,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

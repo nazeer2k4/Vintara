@@ -102,55 +102,55 @@
         <a href="../products-subcategory/Jute Conference Bags/JC01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE CONFERENCE BAGS 4.5/JC01.png" alt="JUTE CONFERENCE BAG 01" />
-            <h2>JUTE CONFERENCE BAG 01</h2>
+            <h2>JUTE CONFERENCE BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Conference Bags/JC02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE CONFERENCE BAGS 4.5/JC02.png" alt="JUTE CONFERENCE BAG 02" />
-            <h2>JUTE CONFERENCE BAG 02</h2>
+            <h2>JUTE CONFERENCE BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Conference Bags/JC03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE CONFERENCE BAGS 4.5/JC03.png" alt="JUTE CONFERENCE BAG 03" />
-            <h2>JUTE CONFERENCE BAG 03</h2>
+            <h2>JUTE CONFERENCE BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Conference Bags/JC04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE CONFERENCE BAGS 4.5/JC04.png" alt="JUTE CONFERENCE BAG 04" />
-            <h2>JUTE CONFERENCE BAG 04</h2>
+            <h2>JUTE CONFERENCE BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Conference Bags/JC05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE CONFERENCE BAGS 4.5/JC05.png" alt="JUTE CONFERENCE BAG 05" />
-            <h2>JUTE CONFERENCE BAG 05</h2>
+            <h2>JUTE CONFERENCE BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Conference Bags/JC06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE CONFERENCE BAGS 4.5/JC06.png" alt="JUTE CONFERENCE BAG 06" />
-            <h2>JUTE CONFERENCE BAG 06</h2>
+            <h2>JUTE CONFERENCE BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Conference Bags/JC07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE CONFERENCE BAGS 4.5/JC07.png" alt="JUTE CONFERENCE BAG 07" />
-            <h2>JUTE CONFERENCE BAG 07</h2>
+            <h2>JUTE CONFERENCE BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Conference Bags/JC08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE CONFERENCE BAGS 4.5/JC08.png" alt="JUTE CONFERENCE BAG 08" />
-            <h2>JUTE CONFERENCE BAG 08</h2>
+            <h2>JUTE CONFERENCE BAG-08</h2>
           </div>
         </a>
         <a href="../products-subcategory/Jute Conference Bags/JC09.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/JUTE CONFERENCE BAGS 4.5/JC09.png" alt="JUTE CONFERENCE BAG 09" />
-            <h2>JUTE CONFERENCE BAG 09</h2>
+            <h2>JUTE CONFERENCE BAG-09</h2>
           </div>
         </a>
       </section>
@@ -186,6 +186,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

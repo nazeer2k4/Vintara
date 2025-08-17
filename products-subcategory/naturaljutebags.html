@@ -102,55 +102,55 @@
         <a href="../products-subcategory/NaturalBags/NJB01.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/NATURAL JUTE BAG 4.5/NJ01.png" alt="NATURAL JUTE BAGS 01" />
-            <h2>NATURAL JUTE BAG 01</h2>
+            <h2>NATURAL JUTE BAG-01</h2>
           </div>
         </a>
         <a href="../products-subcategory/NaturalBags/NJB02.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/NATURAL JUTE BAG 4.5/NJ02.png" alt="NATURAL JUTE BAGS 02" />
-            <h2>NATURAL JUTE BAG 02</h2>
+            <h2>NATURAL JUTE BAG-02</h2>
           </div>
         </a>
         <a href="../products-subcategory/NaturalBags/NJB03.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/NATURAL JUTE BAG 4.5/NJ03.png" alt="NATURAL JUTE BAGS 03" />
-            <h2>NATURAL JUTE BAG 03</h2>
+            <h2>NATURAL JUTE BAG-03</h2>
           </div>
         </a>
         <a href="../products-subcategory/NaturalBags/NJB04.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/NATURAL JUTE BAG 4.5/NJ04 (IMAGE 1).png" alt="NATURAL JUTE BAGS 04" />
-            <h2>NATURAL JUTE BAG 04</h2>
+            <h2>NATURAL JUTE BAG-04</h2>
           </div>
         </a>
         <a href="../products-subcategory/NaturalBags/NJB05.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/NATURAL JUTE BAG 4.5/NJ05.png" alt="NATURAL JUTE BAGS 05" />
-            <h2>NATURAL JUTE BAG 05</h2>
+            <h2>NATURAL JUTE BAG-05</h2>
           </div>
         </a>
         <a href="../products-subcategory/NaturalBags/NJB06.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/NATURAL JUTE BAG 4.5/NJ06 (IMAGE 1).png" alt="NATURAL JUTE BAGS 06" />
-            <h2>NATURAL JUTE BAG 06</h2>
+            <h2>NATURAL JUTE BAG-06</h2>
           </div>
         </a>
         <a href="../products-subcategory/NaturalBags/NJB07.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/NATURAL JUTE BAG 4.5/NJ07 (IMAGE 1).png" alt="NATURAL JUTE BAGS 07" />
-            <h2>NATURAL JUTE BAG 07</h2>
+            <h2>NATURAL JUTE BAG-07</h2>
           </div>
         </a>
         <a href="../products-subcategory/NaturalBags/NJB08.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/NATURAL JUTE BAG 4.5/NJ08 (IMAGE 1).png" alt="NATURAL JUTE BAGS 08" />
-            <h2>NATURAL JUTE BAG 08</h2>
+            <h2>NATURAL JUTE BAG-08</h2>
           </div>
         </a>
         <a href="../products-subcategory/NaturalBags/NJB09.html" class="product-link">
           <div class="product-card">
             <img src="../images/OUR PRODUCTS/NATURAL JUTE BAG 4.5/NJ09.png" alt="NATURAL JUTE BAGS 09" />
-            <h2>NATURAL JUTE BAG 09</h2>
+            <h2>NATURAL JUTE BAG-09</h2>
           </div>
         </a>
       </section>
@@ -186,6 +186,11 @@
           drawerContent.style.maxHeight = null;
         }
       });
+      document.querySelectorAll(".product-card h2").forEach(el => {
+  el.textContent = el.textContent
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+});
     </script>
 
     <script src="../about.js"></script>

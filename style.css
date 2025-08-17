@@ -1735,7 +1735,7 @@ button:not(.testimonial-dot):focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "League Spartan", sans-serif;
+  font-family: "Public Sans", sans-serif !important;
   font-size: 1.15rem;
   font-weight: 600;
   color: #0c4833;
