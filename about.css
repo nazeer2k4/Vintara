@@ -59,6 +59,7 @@ body {
 }
 
 .about-content h1 {
+  color: #fff;
   font-family: var(--font-title);
   font-size: 4rem;
   font-weight: 700;

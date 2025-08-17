@@ -41,6 +41,21 @@
       background-color: var(--pista);
       color: var(--dark-green);
     }
+    .product-sidebar a,
+#mobileFilterList a {
+  color: #0c4833;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 17.6px;
+  font-family: var(--font-title) !important;
+}
+.product-sidebar li:hover a,
+.product-sidebar li.active a,
+#mobileFilterList li:hover a,
+#mobileFilterList li.active a {
+  color: #ffffff !important;
+}
+
 
     .hero {
       background: url("../images/OUR PRODUCTS/CANVAS\ BOTTLE\ BAGS\ HERO.png")

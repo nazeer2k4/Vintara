@@ -47,28 +47,27 @@
     <section class="hero">
       <h1>JUTE CONFERENCE BAGS</h1>
     </section>
-
-    <!-- Sidebar + Product Grid Layout -->
+<!-- Sidebar + Product Grid Layout -->
     <div class="product-page-layout">
       <aside class="product-sidebar">
-        <ul>
-          <li>BRAND PROMOTION BAGS</li>
-          <li>CORPORATE ITEMS</li>
-          <li>SHOPPING BAGS</li>
-          <li>GIFT HAMPER BASKET</li>
-          <li>JUTE POUCHES</li>
-          <li>TOILETRY BAGS</li>
-          <li>GROW BAGS</li>
-          <li>FESTIVAL AND EVENT BAGS</li>
-          <li>FASHIONABLE BAGS</li>
-          <li>BOTTLE BAGS</li>
-          <li>JAR BAGS</li>
-          <li>LUNCH BAGS</li>
-          <li>STORAGE BASKET</li>
-          <li>WALL HANGING BAGS</li>
-          <li>LAUNDRY BAGS</li>
-          <li>YOGA MAT BAGS</li>
-        </ul>
+         <ul id="product-sidebar-list">
+    <li><a href="brandpromotion.html">BRAND PROMOTION BAGS</a></li>
+    <li><a href="corporateitems.html">CORPORATE ITEMS</a></li>
+    <li><a href="shoppingbags.html">SHOPPING BAGS</a></li>
+    <li><a href="gifthamperbasket.html">GIFT HAMPER BASKET</a></li>
+    <li><a href="jutepouches.html">JUTE POUCHES</a></li>
+    <li><a href="toiletrybags.html">TOILETRY BAGS</a></li>
+    <li><a href="growbags.html">GROW BAGS</a></li>
+    <li><a href="festivalandeventbags.html">FESTIVAL AND EVENT BAGS</a></li>
+    <li><a href="fashionablebags.html">FASHIONABLE BAGS</a></li>
+    <li><a href="bottlebags.html">BOTTLE BAGS</a></li>
+    <li><a href="jarbags.html">JAR BAGS</a></li>
+    <li><a href="lunchbags.html">LUNCH BAGS</a></li>
+    <li><a href="storagebasket.html">STORAGE BASKET</a></li>
+    <li><a href="wallhangingbags.html">WALL HANGING BAGS</a></li>
+    <li><a href="laundrybags.html">LAUNDRY BAGS</a></li>
+    <li><a href="yogamatbags.html">YOGA MAT BAGS</a></li>
+  </ul>
       </aside>
 
       <!-- Mobile Filter Drawer (Bottom of screen) -->
@@ -77,25 +76,25 @@
           BRAND PROMOTION BAGS
         </button>
         <div class="drawer-content" id="drawerContent">
-          <ul id="mobileFilterList">
-            <li>BRAND PROMOTION BAGS</li>
-            <li>CORPORATE ITEMS</li>
-            <li>SHOPPING BAGS</li>
-            <li>GIFT HAMPER BASKET</li>
-            <li>JUTE POUCHES</li>
-            <li>TOILETRY BAGS</li>
-            <li>GROW BAGS</li>
-            <li>FESTIVAL AND EVENT BAGS</li>
-            <li>FASHIONABLE BAGS</li>
-            <li>BOTTLE BAGS</li>
-            <li>JAR BAGS</li>
-            <li>LUNCH BAGS</li>
-            <li>STORAGE BASKET</li>
-            <li>WALL HANGING BAGS</li>
-            <li>LAUNDRY BAGS</li>
-            <li>YOGA MAT BAGS</li> 
-          </ul>
-        </div>
+  <ul id="mobileFilterList">
+    <li><a href="brandpromotion.html">BRAND PROMOTION BAGS</a></li>
+    <li><a href="corporateitems.html">CORPORATE ITEMS</a></li>
+    <li><a href="shoppingbags.html">SHOPPING BAGS</a></li>
+    <li><a href="gifthamperbasket.html">GIFT HAMPER BASKET</a></li>
+    <li><a href="jutepouches.html">JUTE POUCHES</a></li>
+    <li><a href="toiletrybags.html">TOILETRY BAGS</a></li>
+    <li><a href="growbags.html">GROW BAGS</a></li>
+    <li><a href="festivalandeventbags.html">FESTIVAL AND EVENT BAGS</a></li>
+    <li><a href="fashionablebags.html">FASHIONABLE BAGS</a></li>
+    <li><a href="bottlebags.html">BOTTLE BAGS</a></li>
+    <li><a href="jarbags.html">JAR BAGS</a></li>
+    <li><a href="lunchbags.html">LUNCH BAGS</a></li>
+    <li><a href="storagebasket.html">STORAGE BASKET</a></li>
+    <li><a href="wallhangingbags.html">WALL HANGING BAGS</a></li>
+    <li><a href="laundrybags.html">LAUNDRY BAGS</a></li>
+    <li><a href="yogamatbags.html">YOGA MAT BAGS</a></li>
+  </ul>
+</div>
       </div>
 
       <section class="product-grid">
@@ -186,11 +185,6 @@
           drawerContent.style.maxHeight = null;
         }
       });
-      document.querySelectorAll(".product-card h2").forEach(el => {
-  el.textContent = el.textContent
-    .toLowerCase()
-    .replace(/\b\w/g, char => char.toUpperCase());
-});
     </script>
 
     <script src="../about.js"></script>
