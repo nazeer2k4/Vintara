@@ -13,8 +13,6 @@ window.addEventListener("scroll", function () {
   } else {
     navbar.classList.remove("v-sticky-navbar-scrolled");
     navbar.classList.add("v-sticky-navbar-transparent");
-    // logo.src = "images/vintaraLogoWhite";
-    links.forEach((link) => (link.style.color = "#ffffff"));
   }
 });
 
