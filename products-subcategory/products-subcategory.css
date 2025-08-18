@@ -58,8 +58,6 @@
 
 
     .hero {
-      background: url("../images/OUR PRODUCTS/CANVAS\ BOTTLE\ BAGS\ HERO.png")
-        center/cover no-repeat;
       height: 45vh;
       display: flex;
       align-items: center;
