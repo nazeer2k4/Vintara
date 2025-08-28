@@ -8,7 +8,9 @@
   --font-title: "League Spartan", "Playfair Display", Arial, sans-serif;
   --font-main: "Public Sans", "Inter", sans-serif;
 }
-
+ html, body {
+      overflow-x: hidden; /* horizontal scroll aur gap hat jayega */
+    }
 /* GLOBAL RESET */
 *,
 *:before,

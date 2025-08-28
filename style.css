@@ -15,6 +15,9 @@
  --section-padding: 5.5rem 0 4.5rem 0;
  --container-max: 1200px;
 }
+ html, body {
+      overflow-x: hidden; /* horizontal scroll aur gap hat jayega */
+    }
 html {
  scroll-behavior: smooth;
  background: var(--background);

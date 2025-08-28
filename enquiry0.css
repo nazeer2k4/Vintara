@@ -1,3 +1,6 @@
+ html, body {
+      overflow-x: hidden; /* horizontal scroll aur gap hat jayega */
+    }
 body {
     min-height: 100vh;
     margin: 0;
