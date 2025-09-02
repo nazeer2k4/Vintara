@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vintara Navbar</title>
-    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -414,9 +413,43 @@
       text-decoration: none; /* ✅ Fix underline */
     }
   </style>
+    <!-- Sticky Premium Navbar -->
+  <nav class="v-sticky-navbar v-sticky-navbar-transparent" id="StickyNavbar">
+    <div class="v-navbar-inner">
+      <div class="v-navbar-left">
+        <!-- Two logos, toggle visibility with CSS -->
+        <img
+          src="/images/vintaraLogoWhite.svg"
+          alt="Vintara Logo White"
+          class="v-navbar-logo logo-white"
+        />
+        <img
+          src="/images/vintaraLogoGreen.svg"
+          alt="Vintara Logo Green"
+          class="v-navbar-logo logo-green"
+        />
+
+        <ul class="v-navbar-menu" id="navbarLinks">
+          <li><a href="/index.html" class="v-navbar-link">Home</a></li>
+          <li>
+            <a href="/products-main.html" class="v-navbar-link">Products</a>
+          </li>
+          <li><a href="/about.html" class="v-navbar-link">About Us</a></li>
+          <li><a href="/blog.html" class="v-navbar-link">Blog</a></li>
+        </ul>
+      </div>
+      <div class="v-navbar-right">
+        <a href="//enquiry0.html" class="v-btn v-navbar-enquire">Enquiry</a>
+        <button
+          class="v-navbar-hamburger"
+          id="vNavbarHamburger"
+          aria-label="Open menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-    <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
+    <!-- <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
       <div class="v-mobile-logo-container">
         <img
           src="/images/vintaraNavbarLogo.svg"
@@ -425,20 +458,27 @@
         />
       </div>
       <ul>
-        <li><a href="/index.html" class="v-navbar-link">Home</a></li>
-        <li>
-          <a href="/products-main.html" class="v-navbar-link">Products</a>
-        </li>
-        <li><a href="/about.html" class="v-navbar-link">About Us</a></li>
-        <li><a href="/blog.html" class="v-navbar-link">Blog</a></li>
-        <li>
-          <a href="/enquiry0.html" class="v-btn v-navbar-enquire">Enquiry</a>
-        </li>
-      </ul>
-    </div>
+      </div>
+    </div> -->
+    
+    <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
+  <div class="v-mobile-logo-container">
+    <img
+      src="/images/vintaraNavbarLogo.svg"
+      alt="Vintara Logo"
+      class="v-mobile-logo"
+    />
+  </div>
+  <ul>
+    <li><a href="/index.html" class="v-navbar-link">Home</a></li>
+    <li><a href="/products-main.html" class="v-navbar-link">Products</a></li>
+    <li><a href="/about.html" class="v-navbar-link">About Us</a></li>
+    <li><a href="/blog.html" class="v-navbar-link">Blog</a></li>
+    <li><a href="/enquiry0.html" class="v-btn v-navbar-enquire">Enquiry</a></li>
+  </ul>
+</div>
   </nav>
-
-  <script>
+           <script>
     // Mobile menu toggle functionality
     document.addEventListener("DOMContentLoaded", function () {
       const hamburger = document.getElementById("vNavbarHamburger");
@@ -496,48 +536,3 @@
     });
   </script>
 </html>
-  <!-- Sticky Premium Navbar -->
-  <nav class="v-sticky-navbar v-sticky-navbar-transparent" id="StickyNavbar">
-    <div class="v-navbar-inner">
-      <div class="v-navbar-left">
-        <!-- Two logos, toggle visibility with CSS -->
-        <img
-          src="/images/vintaraLogoWhite.svg"
-          alt="Vintara Logo White"
-          class="v-navbar-logo logo-white"
-        />
-        <img
-          src="/images/vintaraLogoGreen.svg"
-          alt="Vintara Logo Green"
-          class="v-navbar-logo logo-green"
-        />
-
-        <ul class="v-navbar-menu" id="navbarLinks">
-          <li><a href="/index.html" class="v-navbar-link">Home</a></li>
-          <li>
-            <a href="/products-main.html" class="v-navbar-link">Products</a>
-          </li>
-          <li><a href="/about.html" class="v-navbar-link">About Us</a></li>
-          <li><a href="/blog.html" class="v-navbar-link">Blog</a></li>
-        </ul>
-      </div>
-      <div class="v-navbar-right">
-        <a href="//enquiry0.html" class="v-btn v-navbar-enquire">Enquiry</a>
-        <button
-          class="v-navbar-hamburger"
-          id="vNavbarHamburger"
-          aria-label="Open menu"
-        >
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-    <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
-      <div class="v-mobile-logo-container">
-        <img
-          src="/images/vintaraNavbarLogo.svg"
-          alt="Vintara Logo"
-          class="v-mobile-logo"
-        />
-      </div>
-      <ul>
