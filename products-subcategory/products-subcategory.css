@@ -379,3 +379,19 @@
         display: none !important;
       }
     }
+    #product-sidebar-list li,
+#mobileFilterList li {
+  cursor: pointer;
+}
+
+/* Yeh anchor ko full width bana dega, taki pura list item pe click possible ho */
+#product-sidebar-list li a,
+#mobileFilterList li a {
+  display: block;
+  width: 100%;
+  padding: 14px 12px; /* Touch ke liye bada clickable area */
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+   white-space: nowrap; 
+}
